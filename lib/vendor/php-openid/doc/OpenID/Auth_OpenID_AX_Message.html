@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Auth_OpenID_AX_Message</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Auth_OpenID_AX_Message</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-methods">Methods</a>
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Abstract class containing common code for attribute exchange  messages.</p>
+		<p class="notes">
+			Located in <a class="field" href="_Auth---OpenID---AX.php.html">/Auth/OpenID/AX.php</a> (line <span class="field">84</span>)
+		</p>
+		
+				
+		<pre><a href="../OpenID/Auth_OpenID_Extension.html">Auth_OpenID_Extension</a>
+   |
+   --Auth_OpenID_AX_Message</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-methods">Methods</a>
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../OpenID/Auth_OpenID_AX_FetchRequest.html">Auth_OpenID_AX_FetchRequest</a></td>
+					<td>
+											An attribute exchange 'fetch_request' message. This message is sent  by a relying party when it wishes to obtain attributes about the  subject of an OpenID authentication request.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../OpenID/Auth_OpenID_AX_KeyValueMessage.html">Auth_OpenID_AX_KeyValueMessage</a></td>
+					<td>
+											An abstract class that implements a message that has attribute keys  and values. It contains the common code between fetch_response and  store_request.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../OpenID/Auth_OpenID_AX_StoreResponse.html">Auth_OpenID_AX_StoreResponse</a></td>
+					<td>
+											An indication that the store request was processed along with this  OpenID transaction.  Use make(), NOT the constructor, to create  response objects.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-methods">Methods</a>
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$mode" title="details" class="var-name">$mode</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ns_alias" title="details" class="var-name">$ns_alias</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ns_uri" title="details" class="var-name">$ns_uri</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<span class="disabled">Vars</span>
+						
+			
+										| 
+									<a href="#sec-methods">Methods</a>
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$mode" id="$mode"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$mode</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">95</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">mode: The type of this attribute exchange message. This must be  overridden in subclasses.</p>
+	
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../OpenID/Auth_OpenID_AX_FetchRequest.html#var$mode">Auth_OpenID_AX_FetchRequest::$mode</a>
+							</li>
+					<li>
+				<a href="../OpenID/Auth_OpenID_AX_FetchResponse.html#var$mode">Auth_OpenID_AX_FetchResponse::$mode</a>
+							</li>
+					<li>
+				<a href="../OpenID/Auth_OpenID_AX_StoreRequest.html#var$mode">Auth_OpenID_AX_StoreRequest::$mode</a>
+							</li>
+				</ul>
+		
+
+</div>
+<a name="var$ns_alias" id="$ns_alias"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ns_alias</span>
+			 = <span class="var-default"> 'ax'</span>			(line <span class="line-number">89</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ns_alias: The preferred namespace alias for attribute exchange</p>
+<p class="description"><p>messages</p></p>
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../OpenID/Auth_OpenID_Extension.html#var$ns_alias">Auth_OpenID_Extension::$ns_alias</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$ns_uri" id="$ns_uri"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ns_uri</span>
+			 = <span class="var-default"> Auth_OpenID_AX_NS_URI</span>			(line <span class="line-number">97</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../OpenID/Auth_OpenID_Extension.html#var$ns_uri">Auth_OpenID_Extension::$ns_uri</a></dt>
+						<dd>ns_uri: The namespace to which to add the arguments for this</dd>
+					</dl>
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<span class="disabled">Methods</span>
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../OpenID/Auth_OpenID_Extension.html">Auth_OpenID_Extension</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../OpenID/Auth_OpenID_Extension.html#methodgetExtensionArgs">Auth_OpenID_Extension::getExtensionArgs()</a></span><br>
+													<span class="method-name"><a href="../OpenID/Auth_OpenID_Extension.html#methodtoMessage">Auth_OpenID_Extension::toMessage()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 21 Apr 2009 11:31:30 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</div></body>
+</html>

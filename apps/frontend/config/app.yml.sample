@@ -1,0 +1,42 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+all:
+  sitename:       Речник на българския език
+  sitename_short: Речко
+  site_domain:    rechnik.chitanka.info
+
+  feedback:
+    title:              Обратна връзка
+    thankyou:           Благодаря ви за коментара.
+
+    button:             Изпращане
+    form:
+      message:
+        label:          Коментар
+        required_msg:   Въвеждането на коментар е задължително.
+        min_length_msg: Коментарът трябва да съдържа поне %min_length% знака.
+      name:
+        label:          Име
+      email:
+        label:          Е-поща
+        invalid_msg:    Посочен е невалиден пощенски адрес.
+
+    email:
+      admin@example.com:  Администратор
+
+    subject:            Обратна връзка от Речко
+
+
+  js_library:     http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js
+
+  openid_cookie_expire:  180 # days
+
+  list_max_words:        90
+
+  sf_phpopenid_plugin:
+     lib_path: %SF_ROOT_DIR%/lib/vendor/php-openid
+
+  openid:
+    google: https://www.google.com/accounts/o8/id
+    yahoo:  http://yahoo.com

@@ -1,0 +1,456 @@
+html,body,div,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,dl{margin:0;padding:0}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
+
+body {
+	padding: 2.5em 1em 0 1em;
+	line-height: 1.5em;
+}
+
+h1, h2, h3, h4 {
+	margin: .6em 0 .5em;
+	padding-bottom: 0.3em;
+	border-bottom: thin solid black;
+	font-weight: normal;
+}
+h5, h6 {
+	margin: 1em 0 .2em;
+	font-weight: normal;
+}
+h1 {
+	font-size: 1.8em;
+}
+h2 {
+	font-size: 1.6em;
+}
+h3 {
+	font-size: 1.4em;
+}
+h4 {
+	font-size: 1.2em;
+}
+h5 {
+	font-size: 1.1em;
+}
+h6 {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+ul {
+	margin: 0;
+	padding: 0 0 0 1em;
+}
+.translations dt {
+	padding-left: 1.2em;
+	background: url(images/translation.png) no-repeat 0 65%;
+	font-variant: small-caps;
+}
+dd {
+	margin-left: 2em;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th, td {
+	padding: .1em .5em;
+}
+form th {
+	text-align: right;
+	vertical-align: top;
+}
+
+img {
+	vertical-align: middle;
+	border: none;
+}
+
+.box abbr {
+	font-style: italic;
+}
+
+input[type=text], textarea, button {
+	padding: 0.2em 0.5em;
+	-moz-border-radius: .7em;
+	border-radius: .7em;
+	border: .2ex solid #356F0D;
+}
+input[type=text], textarea {
+	width: 25em;
+}
+button {
+	padding: 0.1em 0.5em;
+	border: .1ex outset silver;
+	color: white;
+	background-color: #337F00;
+	background-image: -moz-linear-gradient(top, #4DBF00, #193F00);
+}
+button:focus, button:hover {
+	background-image: -moz-linear-gradient(top, #4DBF00, #265F00);
+}
+button:active {
+	border-style: inset;
+}
+button.cancel {
+	color: white;
+	background-color: #9F0000;
+	background-image: -moz-linear-gradient(top, #DF0000, #5F0000);
+}
+
+input[type=text]:focus, textarea:focus, select:focus {
+	color: black;
+	background-color: #FFFFCF;
+}
+
+#content {
+	min-height: 30em;
+}
+#content p {
+	margin: .5em 0;
+}
+#sitename {
+	position: absolute;
+	top: .3em;
+	left: 1em;
+	font-size: 1.1em;
+	font-weight: bold;
+	font-variant: small-caps;
+	letter-spacing: .15em;
+}
+#sitename p {
+	float: left;
+	border-bottom: thin solid silver;
+}
+#sitename a {
+	color: silver;
+	background-color: white;
+	text-decoration: none;
+	text-shadow: .1ex .1ex .1ex #606060;
+}
+
+#first-heading {
+	clear: both;
+	margin-top: 1em;
+	font-variant: small-caps;
+}
+.module-main.action-index #first-heading {
+	margin-top: 0;
+	border: none;
+	font-size: 2em;
+	text-align: center;
+	color: black;
+	background-color: white;
+}
+
+.module-main #search {
+	text-align: center;
+	font-size: 130%;
+}
+#random {
+	float: right;
+}
+.search {
+	font-size: 120%;
+}
+.search input {
+	width: 20em;
+	font-size: 110%;
+}
+
+.no-items {
+	padding-left: 1.5em;
+	color: black;
+	background: white url(../sfDoctrinePlugin/images/delete.png) no-repeat center left;
+	font-weight: bold;
+}
+.portal-content {
+	width: 80%;
+	margin: 3em auto;
+	padding: 2em;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	color: black;
+	background-color: white;
+	background-image: -moz-linear-gradient(-60deg, #f0f0f0, white 50%, white);
+	-moz-box-shadow: .2em .2em .4em #C0C0C0;
+	line-height: 1.5em;
+	font-size: 1.5em;
+}
+
+.box {
+	margin: 1em 0;
+	padding: 0;
+	-moz-border-radius: .7em;
+	-webkit-border-radius: .7em;
+	border-radius: .7em;
+}
+.box h2, .box h3 {
+	margin-bottom: 0;
+	padding: .7em .8em .5em;
+	-moz-border-radius: .7em;
+	-webkit-border-radius: .7em;
+	border-radius: .7em;
+}
+.box .data {
+	padding: 1em;
+}
+
+.meaning {
+	color: black;
+	background-color: #E9F3E3;
+}
+.meaning h3 {
+	background-image: -moz-linear-gradient(top, #A8EF77, #E9F3E3);
+}
+.etymology {
+	color: black;
+	background-color: #EFEFEF;
+}
+.etymology h3 {
+	background-image: -moz-linear-gradient(top, #AFBDFF, #EFEFEF);
+}
+.incorrect-forms {
+	color: black;
+	background-color: #EFEAE0;
+}
+.incorrect-forms h3 {
+	background-image: -moz-linear-gradient(top, #EFB595, #EFEAE0);
+}
+.incorrect, .error {
+	color: #CF0000;
+}
+.synonyms {
+	color: black;
+	background-color: #EDEFE0;
+}
+.synonyms h3 {
+	background-image: -moz-linear-gradient(top, #D4EF68, #EDEFE0);
+}
+.derivative-forms, .similar-words {
+	color: black;
+	background-color: #F8F8E8;
+}
+.derivative-forms h3 {
+	background-image: -moz-linear-gradient(top, #EEEF68, #F8F8E8);
+}
+.translations {
+	color: black;
+	background-color: #EFEFEF;
+}
+.translations h3 {
+	background-image: -moz-linear-gradient(top, #8FC2FF, #EFEFEF);
+}
+.forms-table th, .forms-table td {
+	border: thin solid #666;
+}
+.forms-table ul {
+	padding: 0;
+}
+.forms-table li {
+	list-style-type: none;
+}
+.statistics {
+	color: black;
+	background-color: #EFEDE0;
+}
+.statistics h2 {
+	background-image: -moz-linear-gradient(top, #EFE14A, #EFEDE0);
+}
+.links {
+	color: black;
+	background-color: #EFEFEF;
+}
+.links h2 {
+	background-image: -moz-linear-gradient(top, #A4D6EF, #EFEFEF);
+}
+
+.incorrect-forms ul {
+	padding: 0;
+}
+.incorrect-forms .data li {
+	display: inline;
+}
+.incorrect-forms .data li:after {
+	content: " • ";
+}
+.incorrect-forms .data li:last-child:after {
+	content: "";
+}
+.incorrect-forms form {
+	display: inline;
+}
+
+.most-searched ul, ul.words {
+	column-count: 3;
+	-moz-column-count: 3;
+}
+
+#personal {
+	position: absolute;
+	top: .3em;
+	right: 1em;
+	font-size: 95%;
+}
+#personal li {
+	display: inline;
+	margin-left: 1em;
+}
+#personal li a {
+	padding-left: 1.5em;
+}
+.profile a {
+	background: url(images/user.png) no-repeat 0 50%;
+}
+.signin a {
+	background: url(images/anonuser.png) no-repeat 0 50%;
+}
+.signout a {
+	background: url(images/exit.png) no-repeat 0 50%;
+}
+#signin-box {
+	margin: 3em 0;
+	text-align: center;
+}
+#openid-custom div, #openid-custom form {
+	display: inline;
+}
+#openid-custom button {
+	color: black;
+	background-color: #EFEFEF;
+	background-image: -moz-linear-gradient(top, white, #DFDFDF);
+	height: 2em;
+}
+#openid-custom button:focus, #openid-custom button:hover {
+	background-image: -moz-linear-gradient(top, white, #EFEFEF);
+}
+
+#footer {
+	clear: both;
+	margin: 6em auto 1em;
+	padding: 0.2em 0;
+	width: 66%;
+	border-width: thin 0 0;
+	border-style: solid;
+	border-color: #808080;
+	font-size: 90%;
+	text-align: center;
+}
+#footer h2 {
+	display: none;
+}
+#footer li {
+	display: inline;
+	margin: 0 1.2em;
+	list-style-type: none;
+}
+
+a.edit img {
+	vertical-align: top;
+}
+
+.box textarea {
+	width: 80%;
+	height: 10em;
+}
+
+h2 form, h2 div {
+	display: inline;
+}
+h2 input, h2 select {
+	font-size: 80%;
+}
+h2 input[type=text] {
+	width: auto;
+}
+
+input.openid {
+	color: black;
+	background: url(images/openid-logo.png) no-repeat scroll .2ex 50% white;
+	padding-left: 1.5em;
+	width: 30em;
+}
+
+.pagination {
+	margin: 1em auto;
+	font-size: 90%;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+.pagination ul,
+.pagination li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+.pagination a {
+	padding: .15em .35em;
+	border: thin solid #00293F;
+	-moz-border-radius: .3em;
+	-webkit-border-radius: .3em;
+	border-radius: .3em;
+	-moz-box-shadow: .15em .15em .2em #a0a0a0;
+	color: #00293F;
+	background-color: white;
+	text-decoration: none;
+}
+.pagination a:hover,
+.pagination a:active,
+.pagination a.current {
+	color: white;
+	background-color: #00293F;
+	-moz-box-shadow: none;
+}
+
+
+/* Autocomplete */
+.ac_results {
+	padding: 0px;
+	border: 1px solid black;
+	background-color: white;
+	overflow: hidden;
+	z-index: 99999;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: default;
+	display: block;
+	/*
+	if width will be 100% horizontal scrollbar will apear
+	when scroll mode will be used
+	*/
+	/*width: 100%;*/
+	font: menu;
+	font-size: 12px;
+	/*
+	it is very important, if line-height not setted or setted
+	in relative units scroll will be broken in firefox
+	*/
+	line-height: 16px;
+	overflow: hidden;
+}
+
+.ac_loading, .loading {
+	background-image: url(images/indicator.gif) !important;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.ac_odd {
+	background-color: #eee;
+}
+
+.ac_over {
+	background-color: #193F00;
+	color: white;
+}

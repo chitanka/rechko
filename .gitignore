@@ -1,0 +1,17 @@
+config/databases.yml
+apps/frontend/config/settings.yml
+apps/frontend/config/app.yml
+apps/frontend/config/factories.yml
+cache/*
+log/*
+plugins/.*
+web/sf
+web/sitemap.xml
+web/sitemaps/*
+web/uploads/*
+*.yml~
+*.php~
+.DS_Store
+.sf
+*.tmp
+!.gitignore

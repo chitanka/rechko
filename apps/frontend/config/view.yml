@@ -1,0 +1,19 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    #title:        symfony project
+    description:  Речник на българския език. Включва в себе си следните речници: тълковен, правописен, синонимен, словоформен. Свободен софтуер.
+    keywords:     български език, речник, тълковен, правописен, синонимен, словоформи
+    #language:     bg
+    #robots:       index, follow
+
+  stylesheets:    ~
+  javascripts:    ~
+
+  has_layout:     true
+  layout:         layout

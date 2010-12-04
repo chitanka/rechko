@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Auth_OpenID_PAPE_Request</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Auth_OpenID_PAPE_Request</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A Provider Authentication Policy request, sent from a relying party  to a provider</p>
+<p class="description"><p>preferred_auth_policies: The authentication policies that  the relying party prefers</p><p>max_auth_age: The maximum time, in seconds, that the relying party  wants to allow to have elapsed before the user must re-authenticate</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_Auth---OpenID---PAPE.php.html">/Auth/OpenID/PAPE.php</a> (line <span class="field">35</span>)
+		</p>
+		
+				
+		<pre><a href="../OpenID/Auth_OpenID_Extension.html">Auth_OpenID_Extension</a>
+   |
+   --Auth_OpenID_PAPE_Request</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ns_alias" title="details" class="var-name">$ns_alias</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ns_uri" title="details" class="var-name">$ns_uri</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																														
+				<div class="method-definition">
+											<span class="method-result">Auth_OpenID_PAPE_Request</span>
+										<a href="#Auth_OpenID_PAPE_Request" title="details" class="method-name">Auth_OpenID_PAPE_Request</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$preferred_auth_policies</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$max_auth_age</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#addPolicyURI" title="details" class="method-name">addPolicyURI</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$policy_uri</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#fromOpenIDRequest" title="details" class="method-name">fromOpenIDRequest</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$request</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getExtensionArgs" title="details" class="method-name">getExtensionArgs</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#parseExtensionArgs" title="details" class="method-name">parseExtensionArgs</a>
+											(<span class="var-type">args:</span>&nbsp;<span class="var-name">$args</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#preferredTypes" title="details" class="method-name">preferredTypes</a>
+											(<span class="var-type">supported_types:</span>&nbsp;<span class="var-name">$supported_types</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$ns_alias" id="$ns_alias"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ns_alias</span>
+			 = <span class="var-default"> 'pape'</span>			(line <span class="line-number">37</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../OpenID/Auth_OpenID_Extension.html#var$ns_alias">Auth_OpenID_Extension::$ns_alias</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$ns_uri" id="$ns_uri"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ns_uri</span>
+			 = <span class="var-default"> Auth_OpenID_PAPE_NS_URI</span>			(line <span class="line-number">38</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../OpenID/Auth_OpenID_Extension.html#var$ns_uri">Auth_OpenID_Extension::$ns_uri</a></dt>
+						<dd>ns_uri: The namespace to which to add the arguments for this</dd>
+					</dl>
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodAuth_OpenID_PAPE_Request" id="Auth_OpenID_PAPE_Request"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor Auth_OpenID_PAPE_Request</span> (line <span class="line-number">40</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">Auth_OpenID_PAPE_Request</span>
+		<span class="method-name">
+			Auth_OpenID_PAPE_Request
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$preferred_auth_policies</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$max_auth_age</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$preferred_auth_policies</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$max_auth_age</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddPolicyURI" id="addPolicyURI"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">addPolicyURI</span> (line <span class="line-number">60</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add an acceptable authentication policy URI to this request</p>
+<p class="description"><p>This method is intended to be used by the relying party to add  acceptable authentication types to the request.</p><p>policy_uri: The identifier for the preferred type of  authentication.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addPolicyURI
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$policy_uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$policy_uri</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfromOpenIDRequest" id="fromOpenIDRequest"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">fromOpenIDRequest</span> (line <span class="line-number">85</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Instantiate a Request object from the arguments in a checkid_*</p>
+<p class="description"><p>OpenID message</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fromOpenIDRequest
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$request</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$request</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetExtensionArgs" id="getExtensionArgs"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getExtensionArgs</span> (line <span class="line-number">67</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getExtensionArgs
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../OpenID/Auth_OpenID_Extension.html#methodgetExtensionArgs">Auth_OpenID_Extension::getExtensionArgs()</a></dt>
+						<dd>Get the string arguments that should be added to an OpenID  message for this extension.</dd>
+					</dl>
+			
+	</div>
+<a name="methodparseExtensionArgs" id="parseExtensionArgs"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">parseExtensionArgs</span> (line <span class="line-number">104</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the state of this request to be that expressed in these  PAPE arguments</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			parseExtensionArgs
+		</span>
+					(<span class="var-type">args:</span>&nbsp;<span class="var-name">$args</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">args:</span>
+				<span class="var-name">$args</span><span class="var-description">: The PAPE arguments without a namespace</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpreferredTypes" id="preferredTypes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">preferredTypes</span> (line <span class="line-number">142</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Given a list of authentication policy URIs that a provider  supports, this method returns the subsequence of those types  that are preferred by the relying party.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The sub-sequence of the supported types that are  preferred by the relying party. This list will be ordered in  the order that the types appear in the supported_types  sequence, and may be empty if the provider does not prefer any  of the supported authentication types.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			preferredTypes
+		</span>
+					(<span class="var-type">supported_types:</span>&nbsp;<span class="var-name">$supported_types</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">supported_types:</span>
+				<span class="var-name">$supported_types</span><span class="var-description">: A sequence of authentication policy  type URIs that are supported by a provider</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../OpenID/Auth_OpenID_Extension.html">Auth_OpenID_Extension</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../OpenID/Auth_OpenID_Extension.html#methodgetExtensionArgs">Auth_OpenID_Extension::getExtensionArgs()</a></span><br>
+													<span class="method-name"><a href="../OpenID/Auth_OpenID_Extension.html#methodtoMessage">Auth_OpenID_Extension::toMessage()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 21 Apr 2009 11:31:32 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</div></body>
+</html>

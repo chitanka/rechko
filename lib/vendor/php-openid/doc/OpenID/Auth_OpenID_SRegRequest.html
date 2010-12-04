@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Auth_OpenID_SRegRequest</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Auth_OpenID_SRegRequest</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An object to hold the state of a simple registration request.</p>
+<p class="description"><p>required: A list of the required fields in this simple registration  request</p><p>optional: A list of the optional fields in this simple registration  request</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_Auth---OpenID---SReg.php.html">/Auth/OpenID/SReg.php</a> (line <span class="field">169</span>)
+		</p>
+		
+				
+		<pre><a href="../OpenID/Auth_OpenID_Extension.html">Auth_OpenID_Extension</a>
+   |
+   --<a href="../OpenID/Auth_OpenID_SRegBase.html">Auth_OpenID_SRegBase</a>
+      |
+      --Auth_OpenID_SRegRequest</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$ns_alias" title="details" class="var-name">$ns_alias</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																						
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#allRequestedFields" title="details" class="method-name">allRequestedFields</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#build" title="details" class="method-name">build</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$required</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$optional</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$policy_url</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$sreg_ns_uri</span> = <span class="var-default">Auth_OpenID_SREG_NS_URI</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$cls</span> = <span class="var-default">'Auth_OpenID_SRegRequest'</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#contains" title="details" class="method-name">contains</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$field_name</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#fromOpenIDRequest" title="details" class="method-name">fromOpenIDRequest</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$request</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$cls</span> = <span class="var-default">'Auth_OpenID_SRegRequest'</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getExtensionArgs" title="details" class="method-name">getExtensionArgs</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#parseExtensionArgs" title="details" class="method-name">parseExtensionArgs</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$args</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$strict</span> = <span class="var-default">false</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#requestField" title="details" class="method-name">requestField</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$field_name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$required</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$strict</span> = <span class="var-default">false</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#requestFields" title="details" class="method-name">requestFields</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$field_names</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$required</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$strict</span> = <span class="var-default">false</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#wereFieldsRequested" title="details" class="method-name">wereFieldsRequested</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$ns_alias" id="$ns_alias"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$ns_alias</span>
+			 = <span class="var-default"> 'sreg'</span>			(line <span class="line-number">171</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../OpenID/Auth_OpenID_Extension.html#var$ns_alias">Auth_OpenID_Extension::$ns_alias</a></dt>
+					</dl>
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../OpenID/Auth_OpenID_Extension.html">Auth_OpenID_Extension</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../OpenID/Auth_OpenID_Extension.html#var$ns_uri">Auth_OpenID_Extension::$ns_uri</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodallRequestedFields" id="allRequestedFields"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">allRequestedFields</span> (line <span class="line-number">287</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A list of all of the simple registration fields that were  requested, whether they were required or optional.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			allRequestedFields
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodbuild" id="build"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">build</span> (line <span class="line-number">176</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Initialize an empty simple registration request.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			build
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$required</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$optional</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$policy_url</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$sreg_ns_uri</span> = <span class="var-default">Auth_OpenID_SREG_NS_URI</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$cls</span> = <span class="var-default">'Auth_OpenID_SRegRequest'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$required</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$optional</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$policy_url</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$sreg_ns_uri</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$cls</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcontains" id="contains"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">contains</span> (line <span class="line-number">303</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Was this field in the request?</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			contains
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$field_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$field_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfromOpenIDRequest" id="fromOpenIDRequest"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">fromOpenIDRequest</span> (line <span class="line-number">216</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create a simple registration request that contains the fields  that were requested in the OpenID request with the given  arguments</p>
+<p class="description"><p>$request: The OpenID authentication request from which to  extract an sreg request.</p><p>$cls: name of class to use when creating sreg request object.  Used for testing.</p><p>Returns the newly created simple registration request</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fromOpenIDRequest
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$request</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$cls</span> = <span class="var-default">'Auth_OpenID_SRegRequest'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$request</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$cls</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetExtensionArgs" id="getExtensionArgs"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getExtensionArgs</span> (line <span class="line-number">389</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get a dictionary of unqualified simple registration arguments  representing this request.</p>
+<p class="description"><p>This method is essentially the inverse of  C{L{parseExtensionArgs}}. This method serializes the simple  registration request fields.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getExtensionArgs
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../OpenID/Auth_OpenID_Extension.html#methodgetExtensionArgs">Auth_OpenID_Extension::getExtensionArgs()</a></dt>
+						<dd>Get the string arguments that should be added to an OpenID  message for this extension.</dd>
+					</dl>
+			
+	</div>
+<a name="methodparseExtensionArgs" id="parseExtensionArgs"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">parseExtensionArgs</span> (line <span class="line-number">262</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Parse the unqualified simple registration request parameters  and add them to this object.</p>
+<p class="description"><p>This method is essentially the inverse of  getExtensionArgs. This method restores the serialized simple  registration request fields.</p><p>If you are extracting arguments from a standard OpenID  checkid_* request, you probably want to use fromOpenIDRequest,  which will extract the sreg namespace and arguments from the  OpenID request. This method is intended for cases where the  OpenID server needs more control over how the arguments are  parsed than that method provides.</p><p>$args == $message-&gt;getArgs($ns_uri);  $request-&gt;parseExtensionArgs($args);</p><p>$args: The unqualified simple registration arguments</p><p>strict: Whether requests with fields that are not defined in  the simple registration specification should be tolerated (and  ignored)</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			parseExtensionArgs
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$args</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$strict</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$args</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$strict</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrequestField" id="requestField"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">requestField</span> (line <span class="line-number">320</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Request the specified field from the OpenID user</p>
+<p class="description"><p>$field_name: the unqualified simple registration field name</p><p>required: whether the given field should be presented to the  user as being a required to successfully complete the request</p><p>strict: whether to raise an exception when a field is added to  a request more than once</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			requestField
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$field_name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$required</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$strict</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$field_name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$required</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$strict</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrequestFields" id="requestFields"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">requestFields</span> (line <span class="line-number">366</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add the given list of fields to the request</p>
+<p class="description"><p>field_names: The simple registration data fields to request</p><p>required: Whether these values should be presented to the user  as required</p><p>strict: whether to raise an exception when a field is added to  a request more than once</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			requestFields
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$field_names</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$required</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$strict</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$field_names</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$required</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$strict</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwereFieldsRequested" id="wereFieldsRequested"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">wereFieldsRequested</span> (line <span class="line-number">295</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Have any simple registration fields been requested?</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			wereFieldsRequested
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../OpenID/Auth_OpenID_Extension.html">Auth_OpenID_Extension</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../OpenID/Auth_OpenID_Extension.html#methodgetExtensionArgs">Auth_OpenID_Extension::getExtensionArgs()</a></span><br>
+													<span class="method-name"><a href="../OpenID/Auth_OpenID_Extension.html#methodtoMessage">Auth_OpenID_Extension::toMessage()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 21 Apr 2009 11:31:33 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</div></body>
+</html>

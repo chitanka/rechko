@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page AX.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/Auth/OpenID/AX.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|							<a href="#sec-includes">Includes</a>
+			|							<a href="#sec-constants">Constants</a>
+			|									<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Implements the OpenID attribute exchange specification, version 1.0  as of svn revision 370 from openid.net svn.</p>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|							<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../OpenID/Auth_OpenID_AX.html">Auth_OpenID_AX</a>
+					</td>
+					<td>
+											AX utility class.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../OpenID/Auth_OpenID_AX_Error.html">Auth_OpenID_AX_Error</a>
+					</td>
+					<td>
+											Results from data that does not meet the attribute exchange 1.0  specification
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../OpenID/Auth_OpenID_AX_Message.html">Auth_OpenID_AX_Message</a>
+					</td>
+					<td>
+											Abstract class containing common code for attribute exchange  messages.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../OpenID/Auth_OpenID_AX_AttrInfo.html">Auth_OpenID_AX_AttrInfo</a>
+					</td>
+					<td>
+											Represents a single attribute in an attribute exchange  request. This should be added to an AXRequest object in order to  request the attribute.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../OpenID/Auth_OpenID_AX_FetchRequest.html">Auth_OpenID_AX_FetchRequest</a>
+					</td>
+					<td>
+											An attribute exchange 'fetch_request' message. This message is sent  by a relying party when it wishes to obtain attributes about the  subject of an OpenID authentication request.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../OpenID/Auth_OpenID_AX_KeyValueMessage.html">Auth_OpenID_AX_KeyValueMessage</a>
+					</td>
+					<td>
+											An abstract class that implements a message that has attribute keys  and values. It contains the common code between fetch_response and  store_request.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../OpenID/Auth_OpenID_AX_FetchResponse.html">Auth_OpenID_AX_FetchResponse</a>
+					</td>
+					<td>
+											A fetch_response attribute exchange message.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../OpenID/Auth_OpenID_AX_StoreRequest.html">Auth_OpenID_AX_StoreRequest</a>
+					</td>
+					<td>
+											A store request attribute exchange message representation.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../OpenID/Auth_OpenID_AX_StoreResponse.html">Auth_OpenID_AX_StoreResponse</a>
+					</td>
+					<td>
+											An indication that the store request was processed along with this  OpenID transaction.  Use make(), NOT the constructor, to create  response objects.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|						<span class="disabled">Includes</span>
+			|							<a href="#sec-constants">Constants</a>
+				|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="_Auth/OpenID/Message_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require_once</span>
+			(<span class="include-name"><a href="../OpenID/_Auth---OpenID---Message.php.html">"Auth/OpenID/Message.php"</a></span>)
+			(line <span class="line-number">14</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+<a name="_Auth/OpenID/Extension_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require_once</span>
+			(<span class="include-name"><a href="../OpenID/_Auth---OpenID---Extension.php.html">"Auth/OpenID/Extension.php"</a></span>)
+			(line <span class="line-number">13</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Require utility classes and functions for the consumer.</p>
+	
+</div>
+<a name="_Auth/OpenID/TrustRoot_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require_once</span>
+			(<span class="include-name">"Auth/OpenID/TrustRoot.php"</span>)
+			(line <span class="line-number">15</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|										<a href="#sec-includes">Includes</a>
+				|						<span class="disabled">Constants</span>
+			|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="defineAuth_OpenID_AX_MINIMUM_SUPPORTED_ALIAS_LENGTH"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">Auth_OpenID_AX_MINIMUM_SUPPORTED_ALIAS_LENGTH</span> = 32
+			(line <span class="line-number">26</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineAuth_OpenID_AX_NS_URI"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">Auth_OpenID_AX_NS_URI</span> = 'http://openid.net/srv/ax/1.0'
+			(line <span class="line-number">17</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineAuth_OpenID_AX_UNLIMITED_VALUES"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">Auth_OpenID_AX_UNLIMITED_VALUES</span> = 'unlimited'
+			(line <span class="line-number">22</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|										<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|									<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionAuth_OpenID_AX_checkAlias" id="functionAuth_OpenID_AX_checkAlias"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_AX_checkAlias</span> (line <span class="line-number">51</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check an alias for invalid characters; raise AXError if any are  found.  Return None if the alias is valid.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Auth_OpenID_AX_checkAlias
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$alias</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$alias</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionAuth_OpenID_AX_toTypeURIs" id="functionAuth_OpenID_AX_toTypeURIs"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_AX_toTypeURIs</span> (line <span class="line-number">238</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Given a namespace mapping and a string containing a comma-separated  list of namespace aliases, return a list of type URIs that  correspond to those aliases.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> <p>The list of namespace URIs that corresponds to the  supplied list of aliases. If the string was zero-length or None, an  empty list will be returned.</p><p>return null If an alias is present in the list of aliases but  is not present in the namespace map.</p></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$seq</span>
+		<span class="method-name">
+			Auth_OpenID_AX_toTypeURIs
+		</span>
+					(<span class="var-type">$namespace_map</span>&nbsp;<span class="var-name">&$namespace_map</span>, <span class="var-type">$alias_list_s</span>&nbsp;<span class="var-name">$alias_list_s</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$namespace_map</span>
+				<span class="var-name">&$namespace_map</span><span class="var-description">: The mapping from namespace URI to alias</span>			</li>
+					<li>
+				<span class="var-type">$alias_list_s</span>
+				<span class="var-name">$alias_list_s</span><span class="var-description">: The string containing the comma-separated  list of aliases. May also be None for convenience.</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 21 Apr 2009 11:31:29 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</div></body>
+</html>

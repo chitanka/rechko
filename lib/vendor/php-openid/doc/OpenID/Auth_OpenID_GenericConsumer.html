@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Auth_OpenID_GenericConsumer</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Auth_OpenID_GenericConsumer</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This class is the interface to the OpenID consumer logic.</p>
+<p class="description"><p>Instances of it maintain no per-request state, so they can be  reused (or even used by multiple threads concurrently) as needed.</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_Auth---OpenID---Consumer.php.html">/Auth/OpenID/Consumer.php</a> (line <span class="field">568</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$openid1_return_to_identifier_name" title="details" class="var-name">$openid1_return_to_identifier_name</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$store" title="details" class="var-name">$store</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																						
+				<div class="method-definition">
+											<span class="method-result">Auth_OpenID_GenericConsumer</span>
+										<a href="#Auth_OpenID_GenericConsumer" title="details" class="method-name">Auth_OpenID_GenericConsumer</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$store</span>, <span class="var-type"><a href="../OpenID/Auth_OpenID_OpenIDStore.html">Auth_OpenID_OpenIDStore</a></span>&nbsp;<span class="var-name">$store</span>, <span class="var-type">bool</span>&nbsp;<span class="var-name">$immediate</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$openid1_return_to_identifier_name" id="$openid1_return_to_identifier_name"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$openid1_return_to_identifier_name</span>
+			 = <span class="var-default"> 'openid1_claimed_id'</span>			(line <span class="line-number">594</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Another query parameter that gets added to the return_to for  OpenID 1; if the user's session state is lost, use this claimed  identifier to do discovery when verifying the response.</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$store" id="$store"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$store</span>
+						(line <span class="line-number">577</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This consumer's store object.</p>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodAuth_OpenID_GenericConsumer" id="Auth_OpenID_GenericConsumer"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor Auth_OpenID_GenericConsumer</span> (line <span class="line-number">614</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method initializes a new <a href="../OpenID/Auth_OpenID_Consumer.html">Auth_OpenID_Consumer</a>  instance to access the library.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">Auth_OpenID_GenericConsumer</span>
+		<span class="method-name">
+			Auth_OpenID_GenericConsumer
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$store</span>, <span class="var-type"><a href="../OpenID/Auth_OpenID_OpenIDStore.html">Auth_OpenID_OpenIDStore</a></span>&nbsp;<span class="var-name">$store</span>, <span class="var-type">bool</span>&nbsp;<span class="var-name">$immediate</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../OpenID/Auth_OpenID_OpenIDStore.html">Auth_OpenID_OpenIDStore</a></span>
+				<span class="var-name">$store</span><span class="var-description">: This must be an object  that implements the interface in <a href="../OpenID/Auth_OpenID_OpenIDStore.html">Auth_OpenID_OpenIDStore</a>.  Several concrete implementations are provided, to cover most common use  cases.  For stores backed by MySQL, PostgreSQL, or SQLite, see  the <a href="../OpenID/Auth_OpenID_SQLStore.html">Auth_OpenID_SQLStore</a> class and its sublcasses.  For a  filesystem-backed store, see the <a href="../OpenID/Auth_OpenID_FileStore.html">Auth_OpenID_FileStore</a> module.  As a last resort, if it isn't possible for the server to store  state at all, an instance of <a href="../OpenID/Auth_OpenID_DumbStore.html">Auth_OpenID_DumbStore</a> can be used.</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$immediate</span><span class="var-description">: This is an optional boolean value.  It  controls whether the library uses immediate mode, as explained  in the module description.  The default value is False, which  disables immediate mode.</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$store</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 21 Apr 2009 11:31:30 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</div></body>
+</html>

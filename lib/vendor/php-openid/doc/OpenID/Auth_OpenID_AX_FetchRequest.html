@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Auth_OpenID_AX_FetchRequest</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Auth_OpenID_AX_FetchRequest</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An attribute exchange 'fetch_request' message. This message is sent  by a relying party when it wishes to obtain attributes about the  subject of an OpenID authentication request.</p>
+		<p class="notes">
+			Located in <a class="field" href="_Auth---OpenID---AX.php.html">/Auth/OpenID/AX.php</a> (line <span class="field">268</span>)
+		</p>
+		
+				
+		<pre><a href="../OpenID/Auth_OpenID_Extension.html">Auth_OpenID_Extension</a>
+   |
+   --<a href="../OpenID/Auth_OpenID_AX_Message.html">Auth_OpenID_AX_Message</a>
+      |
+      --Auth_OpenID_AX_FetchRequest</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$mode" title="details" class="var-name">$mode</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																						
+				<div class="method-definition">
+											<span class="method-result">Auth_OpenID_AX_FetchRequest</span>
+										<a href="#Auth_OpenID_AX_FetchRequest" title="details" class="method-name">Auth_OpenID_AX_FetchRequest</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$update_url</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">true</span>
+										<a href="#add" title="details" class="method-name">add</a>
+											(<span class="var-type">attribute:</span>&nbsp;<span class="var-name">$attribute</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#contains" title="details" class="method-name">contains</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$type_uri</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#fromOpenIDRequest" title="details" class="method-name">&amp;fromOpenIDRequest</a>
+											(<span class="var-type">request:</span>&nbsp;<span class="var-name">$request</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result"><a href="../OpenID/Auth_OpenID_AX_FetchRequest.html">Auth_OpenID_AX_FetchRequest</a></span>
+										<a href="#getExtensionArgs" title="details" class="method-name">getExtensionArgs</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">A</span>
+										<a href="#getRequiredAttrs" title="details" class="method-name">getRequiredAttrs</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#iterAttrs" title="details" class="method-name">iterAttrs</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#iterTypes" title="details" class="method-name">iterTypes</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">$result</span>
+										<a href="#parseExtensionArgs" title="details" class="method-name">parseExtensionArgs</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$ax_args</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$mode" id="$mode"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$mode</span>
+			 = <span class="var-default"> 'fetch_request'</span>			(line <span class="line-number">270</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../OpenID/Auth_OpenID_AX_Message.html#var$mode">Auth_OpenID_AX_Message::$mode</a></dt>
+						<dd>mode: The type of this attribute exchange message. This must be  overridden in subclasses.</dd>
+					</dl>
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../OpenID/Auth_OpenID_AX_Message.html">Auth_OpenID_AX_Message</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../OpenID/Auth_OpenID_AX_Message.html#var$ns_alias">Auth_OpenID_AX_Message::$ns_alias</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../OpenID/Auth_OpenID_AX_Message.html#var$ns_uri">Auth_OpenID_AX_Message::$ns_uri</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodAuth_OpenID_AX_FetchRequest" id="Auth_OpenID_AX_FetchRequest"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor Auth_OpenID_AX_FetchRequest</span> (line <span class="line-number">272</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">Auth_OpenID_AX_FetchRequest</span>
+		<span class="method-name">
+			Auth_OpenID_AX_FetchRequest
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$update_url</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$update_url</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodadd" id="add"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">add</span> (line <span class="line-number">295</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add an attribute to this attribute exchange request.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> on success, false when the requested attribute is  already present in this fetch request.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">true</span>
+		<span class="method-name">
+			add
+		</span>
+					(<span class="var-type">attribute:</span>&nbsp;<span class="var-name">$attribute</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">attribute:</span>
+				<span class="var-name">$attribute</span><span class="var-description">: The attribute that is being requested</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcontains" id="contains"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">contains</span> (line <span class="line-number">528</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Is the given type URI present in this fetch_request?</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			contains
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$type_uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type_uri</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfromOpenIDRequest" id="fromOpenIDRequest"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">fromOpenIDRequest</span> (line <span class="line-number">389</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Extract a FetchRequest from an OpenID message</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> An Auth_OpenID_AX_Error or the  Auth_OpenID_AX_FetchRequest extracted from the request message if  successful</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			&amp;fromOpenIDRequest
+		</span>
+					(<span class="var-type">request:</span>&nbsp;<span class="var-name">$request</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">request:</span>
+				<span class="var-name">$request</span><span class="var-description">: The OpenID request containing the attribute  fetch request</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetExtensionArgs" id="getExtensionArgs"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getExtensionArgs</span> (line <span class="line-number">313</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the serialized form of this attribute fetch request.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> The fetch request message parameters</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../OpenID/Auth_OpenID_AX_FetchRequest.html">Auth_OpenID_AX_FetchRequest</a></span>
+		<span class="method-name">
+			getExtensionArgs
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../OpenID/Auth_OpenID_Extension.html#methodgetExtensionArgs">Auth_OpenID_Extension::getExtensionArgs()</a></dt>
+						<dd>Get the string arguments that should be added to an OpenID  message for this extension.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetRequiredAttrs" id="getRequiredAttrs"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRequiredAttrs</span> (line <span class="line-number">367</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get the type URIs for all attributes that have been marked as  required.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> list of the type URIs for attributes that have been  marked as required.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">A</span>
+		<span class="method-name">
+			getRequiredAttrs
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoditerAttrs" id="iterAttrs"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">iterAttrs</span> (line <span class="line-number">515</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Iterate over the AttrInfo objects that are contained in this  fetch_request.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			iterAttrs
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoditerTypes" id="iterTypes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">iterTypes</span> (line <span class="line-number">520</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			iterTypes
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodparseExtensionArgs" id="parseExtensionArgs"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">parseExtensionArgs</span> (line <span class="line-number">432</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Given attribute exchange arguments, populate this FetchRequest.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Auth_OpenID_AX_Error if the data to be parsed  does not follow the attribute exchange specification. At least  when 'if_available' or 'required' is not specified for a  particular attribute type.  Returns true otherwise.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$result</span>
+		<span class="method-name">
+			parseExtensionArgs
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$ax_args</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$ax_args</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../OpenID/Auth_OpenID_Extension.html">Auth_OpenID_Extension</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../OpenID/Auth_OpenID_Extension.html#methodgetExtensionArgs">Auth_OpenID_Extension::getExtensionArgs()</a></span><br>
+													<span class="method-name"><a href="../OpenID/Auth_OpenID_Extension.html#methodtoMessage">Auth_OpenID_Extension::toMessage()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 21 Apr 2009 11:31:29 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</div></body>
+</html>

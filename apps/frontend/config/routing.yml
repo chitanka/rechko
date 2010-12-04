@@ -1,0 +1,274 @@
+word_type:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                WordType
+    module:               adminType
+    prefix_path:          /word-type
+    column:               id
+    with_wildcard_routes: true
+
+word:
+  url:   /w/:query
+  param: { module: word, action: index, query: ~ }
+  options:
+    segment_separators: [/]
+
+word_old:
+  url:   /bg/:query
+  param: { module: word, action: indexOld, query: ~ }
+
+word_translation:
+  url:   /t/:word_id/:lang
+  param: { module: word, action: translation }
+
+random:
+  url:   /random
+  param: { module: word, action: random }
+
+type_list:
+  url:     /type/:name/:page
+  class:   sfDoctrineRoute
+  options: { model: WordType, type: object }
+  param: { module: type, action: list, page: 1 }
+
+word_new:
+  url:     /word/new
+  param:   { module: word, action: newWord }
+  requirements: { sf_method: get }
+
+word_create:
+  url:     /word
+  param:   { module: word, action: createWord }
+  requirements: { sf_method: post }
+
+word_edit:
+  url:     /word/edit/word/:id
+  class:   sfDoctrineRoute
+  options: { model: Word, type: object }
+  param:   { module: word, action: editWord }
+
+word_update:
+  url:     /word/edit/word/:id
+  class:   sfDoctrineRoute
+  options: { model: Word, type: object }
+  param:   { module: word, action: updateWord }
+  requirements: { sf_method: put }
+
+word_delete:
+  url:     /word/delete/word/:id
+  class:   sfDoctrineRoute
+  options: { model: Word, type: object }
+  param:   { module: word, action: deleteWord }
+  requirements: { sf_method: delete }
+
+name_stressed_edit:
+  url:     /word/edit/name-stressed/:id
+  class:   sfDoctrineRoute
+  options: { model: Word, type: object }
+  param:   { module: word, action: editNameStressed }
+
+name_stressed_update:
+  url:     /word/edit/name-stressed/:id
+  class:   sfDoctrineRoute
+  options: { model: Word, type: object }
+  param:   { module: word, action: updateNameStressed }
+  requirements: { sf_method: put }
+
+type_edit:
+  url:     /word/edit/type/:id
+  class:   sfDoctrineRoute
+  options: { model: Word, type: object }
+  param:   { module: word, action: editType }
+
+type_update:
+  url:     /word/edit/type/:id
+  class:   sfDoctrineRoute
+  options: { model: Word, type: object }
+  param:   { module: word, action: updateType }
+  requirements: { sf_method: put }
+
+meaning_edit:
+  url:     /word/edit/meaning/:id
+  class:   sfDoctrineRoute
+  options: { model: Word, type: object }
+  param:   { module: word, action: editMeaning }
+
+meaning_update:
+  url:     /word/edit/meaning/:id
+  class:   sfDoctrineRoute
+  options: { model: Word, type: object }
+  param:   { module: word, action: updateMeaning }
+  requirements: { sf_method: put }
+
+synonyms_edit:
+  url:     /word/edit/synonyms/:id
+  class:   sfDoctrineRoute
+  options: { model: Word, type: object }
+  param:   { module: word, action: editSynonyms }
+
+synonyms_update:
+  url:     /word/edit/synonyms/:id
+  class:   sfDoctrineRoute
+  options: { model: Word, type: object }
+  param:   { module: word, action: updateSynonyms }
+  requirements: { sf_method: put }
+
+etymology_edit:
+  url:     /word/edit/etymology/:id
+  class:   sfDoctrineRoute
+  options: { model: Word, type: object }
+  param:   { module: word, action: editEtymology }
+
+etymology_update:
+  url:     /word/edit/etymology/:id
+  class:   sfDoctrineRoute
+  options: { model: Word, type: object }
+  param:   { module: word, action: updateEtymology }
+  requirements: { sf_method: put }
+
+incorrect_new:
+  url:     /word/new/incorrect/:word_id
+  param:   { module: word, action: newIncorrectForm }
+  requirements: { sf_method: get }
+
+incorrect_create:
+  url:     /word/new/incorrect
+  param:   { module: word, action: createIncorrectForm }
+  requirements: { sf_method: post }
+
+incorrect_edit:
+  url:     /word/edit/incorrect/:id
+  class:   sfDoctrineRoute
+  options: { model: IncorrectForm, type: object }
+  param:   { module: word, action: editIncorrectForm }
+
+incorrect_update:
+  url:     /word/edit/incorrect/:id
+  class:   sfDoctrineRoute
+  options: { model: IncorrectForm, type: object }
+  param:   { module: word, action: updateIncorrectForm }
+  requirements: { sf_method: put }
+
+incorrect_delete:
+  url:     /word/delete/incorrect/:id
+  class:   sfDoctrineRoute
+  options: { model: IncorrectForm, type: object }
+  param:   { module: word, action: deleteIncorrectForm }
+  requirements: { sf_method: delete }
+
+derivative_edit:
+  url:     /word/edit/derivative/:id
+  class:   sfDoctrineRoute
+  options: { model: DerivativeForm, type: object }
+  param:   { module: word, action: editDerivativeForm }
+
+derivative_update:
+  url:     /word/edit/derivative/:id
+  class:   sfDoctrineRoute
+  options: { model: DerivativeForm, type: object }
+  param:   { module: word, action: updateDerivativeForm }
+  requirements: { sf_method: put }
+
+derivative_delete:
+  url:     /word/delete/derivative/:id
+  class:   sfDoctrineRoute
+  options: { model: DerivativeForm, type: object }
+  param:   { module: word, action: deleteDerivativeForm }
+  requirements: { sf_method: delete }
+
+
+translation_new:
+  url:     /word/new/translation/:word_id
+  param:   { module: word, action: newTranslation }
+  requirements: { sf_method: get }
+
+translation_create:
+  url:     /word/new/translation
+  param:   { module: word, action: createTranslation }
+  requirements: { sf_method: post }
+
+translation_edit:
+  url:     /word/edit/translation/:id
+  class:   sfDoctrineRoute
+  options: { model: WordTranslation, type: object }
+  param:   { module: word, action: editTranslation }
+
+translation_update:
+  url:     /word/edit/translation/:id
+  class:   sfDoctrineRoute
+  options: { model: WordTranslation, type: object }
+  param:   { module: word, action: updateTranslation }
+  requirements: { sf_method: put }
+
+
+faq_edit:
+  url:   /faq/edit
+  param: { module: faq, action: edit }
+
+faq_edit_rights:
+  url:   /faq/edit/rights
+  param: { module: faq, action: editRights }
+
+recent_changes:
+  url:   /recent-changes
+  param: { module: revision, action: index }
+
+about:
+  url:   /about
+  param: { module: main, action: about }
+
+talkoven:
+  url:   /talkoven
+  param: { module: main, action: talkoven }
+
+sinonimen:
+  url:   /sinonimen
+  param: { module: main, action: sinonimen }
+
+pravopisen:
+  url:   /pravopisen
+  param: { module: main, action: pravopisen }
+
+feedback:
+  url:   /feedback
+  param: { module: bmFeedback, action: index }
+
+feedback_thankyou:
+  url:   /feedback/thankyou
+  param: { module: bmFeedback, action: thankyou }
+
+user:
+  url:     /user/:slug
+  class:   sfDoctrineRoute
+  options: { model: sfGuardUser, type: object }
+  param:   { module: user, action: index }
+
+signin:
+  url:   /signin
+  param: { module: auth, action: signin }
+signout:
+  url:   /signout
+  param: { module: auth, action: signout }
+
+openid_finishauth:
+  url:   /auth/finish
+  param: { module: auth, action: finish }
+openid_error:
+  url:   /auth/openid-error
+  param: { module: auth, action: openidError }
+
+homepage:
+  url:   /
+  param: { module: main, action: index }
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# generic rules
+# please, remove them by adding more specific rules
+# default_index:
+#   url:   /:module
+#   param: { action: index }
+#
+# default:
+#   url:   /:module/:action/*

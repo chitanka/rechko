@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page SReg.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/Auth/OpenID/SReg.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|							<a href="#sec-includes">Includes</a>
+			|							<a href="#sec-constants">Constants</a>
+			|									<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Simple registration request and response parsing and object  representation.</p>
+<p class="description"><p>This module contains objects representing simple registration  requests and responses that can be used with both OpenID relying  parties and OpenID providers.</p><p><ol><li>The relying party creates a request object and adds it to the
+ <a href="../OpenID/Auth_OpenID_AuthRequest.html">Auth_OpenID_AuthRequest</a> object before making the</li></ol> checkid request to the OpenID provider:</p><p>$sreg_req = Auth_OpenID_SRegRequest::build(array('email'));    $auth_request-&gt;addExtension($sreg_req);</p><p>2. The OpenID provider extracts the simple registration request  from the OpenID request using Auth_OpenID_SRegRequest::fromOpenIDRequest, gets the user's  approval and data, creates an <a href="../OpenID/Auth_OpenID_SRegResponse.html">Auth_OpenID_SRegResponse</a>  object and adds it to the id_res response:</p><p>$sreg_req = Auth_OpenID_SRegRequest::fromOpenIDRequest(                                   $checkid_request);    // [ get the user's approval and data, informing the user that    //   the fields in sreg_response were requested ]    $sreg_resp = Auth_OpenID_SRegResponse::extractResponse(                                   $sreg_req, $user_data);    $sreg_resp-&gt;toMessage($openid_response-&gt;fields);</p><p>3. The relying party uses Auth_OpenID_SRegResponse::fromSuccessResponse to extract the data  from the OpenID response:</p><p>$sreg_resp = Auth_OpenID_SRegResponse::fromSuccessResponse(                                   $success_response);</p></p>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|							<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../OpenID/Auth_OpenID_SRegBase.html">Auth_OpenID_SRegBase</a>
+					</td>
+					<td>
+											A base class for classes dealing with Simple Registration protocol  messages.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../OpenID/Auth_OpenID_SRegRequest.html">Auth_OpenID_SRegRequest</a>
+					</td>
+					<td>
+											An object to hold the state of a simple registration request.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../OpenID/Auth_OpenID_SRegResponse.html">Auth_OpenID_SRegResponse</a>
+					</td>
+					<td>
+											Represents the data returned in a simple registration response  inside of an OpenID C{id_res} response. This object will be created  by the OpenID server, added to the C{id_res} response object, and  then extracted from the C{id_res} message by the Consumer.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|						<span class="disabled">Includes</span>
+			|							<a href="#sec-constants">Constants</a>
+				|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="_Auth/OpenID/Message_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require_once</span>
+			(<span class="include-name"><a href="../OpenID/_Auth---OpenID---Message.php.html">'Auth/OpenID/Message.php'</a></span>)
+			(line <span class="line-number">45</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Import message and extension internals.</p>
+	
+</div>
+<a name="_Auth/OpenID/Extension_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require_once</span>
+			(<span class="include-name"><a href="../OpenID/_Auth---OpenID---Extension.php.html">'Auth/OpenID/Extension.php'</a></span>)
+			(line <span class="line-number">46</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|										<a href="#sec-includes">Includes</a>
+				|						<span class="disabled">Constants</span>
+			|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="defineAuth_OpenID_SREG_NS_URI"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">Auth_OpenID_SREG_NS_URI</span> = Auth_OpenID_SREG_NS_URI_1_1
+			(line <span class="line-number">86</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineAuth_OpenID_SREG_NS_URI_1_0"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">Auth_OpenID_SREG_NS_URI_1_0</span> = 'http://openid.net/sreg/1.0'
+			(line <span class="line-number">77</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineAuth_OpenID_SREG_NS_URI_1_1"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">Auth_OpenID_SREG_NS_URI_1_1</span> = 'http://openid.net/extensions/sreg/1.1'
+			(line <span class="line-number">81</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|										<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|									<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionAuth_OpenID_checkFieldName" id="functionAuth_OpenID_checkFieldName"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_checkFieldName</span> (line <span class="line-number">65</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Check to see that the given value is a valid simple registration  data field name.  Return true if so, false if not.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Auth_OpenID_checkFieldName
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$field_name</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$field_name</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionAuth_OpenID_supportsSReg" id="functionAuth_OpenID_supportsSReg"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_supportsSReg</span> (line <span class="line-number">97</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Does the given endpoint advertise support for simple  registration?</p>
+<p class="description"><p>$endpoint: The endpoint object as returned by OpenID discovery.  returns whether an sreg type was advertised by the endpoint</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Auth_OpenID_supportsSReg
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$endpoint</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$endpoint</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 21 Apr 2009 11:31:33 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</div></body>
+</html>

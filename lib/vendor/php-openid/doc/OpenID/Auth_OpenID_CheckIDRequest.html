@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Auth_OpenID_CheckIDRequest</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Auth_OpenID_CheckIDRequest</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A request to confirm the identity of a user.</p>
+		<p class="notes">
+			Located in <a class="field" href="_Auth---OpenID---Server.php.html">/Auth/OpenID/Server.php</a> (line <span class="field">708</span>)
+		</p>
+		
+				
+		<pre><a href="../OpenID/Auth_OpenID_Request.html">Auth_OpenID_Request</a>
+   |
+   --Auth_OpenID_CheckIDRequest</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$immediate" title="details" class="var-name">$immediate</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$mode" title="details" class="var-name">$mode</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$namespace" title="details" class="var-name">$namespace</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$trust_root" title="details" class="var-name">$trust_root</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$verifyReturnTo" title="details" class="var-name">$verifyReturnTo</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																														
+				<div class="method-definition">
+											<span class="method-result">Auth_OpenID_CheckIDRequest</span>
+										<a href="#Auth_OpenID_CheckIDRequest" title="details" class="method-name">Auth_OpenID_CheckIDRequest</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$identity</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$return_to</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$trust_root</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$immediate</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$assoc_handle</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$server</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$claimed_id</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#answer" title="details" class="method-name">answer</a>
+											(<span class="var-type">bool</span>&nbsp;<span class="var-name">$allow</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$server_url</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$identity</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$claimed_id</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#encodeToURL" title="details" class="method-name">encodeToURL</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$server_url</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#equals" title="details" class="method-name">equals</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$other</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#fromMessage" title="details" class="method-name">fromMessage</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$message</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$server</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getCancelURL" title="details" class="method-name">getCancelURL</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#idSelect" title="details" class="method-name">idSelect</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#make" title="details" class="method-name">make</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">&$message</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$identity</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$return_to</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$trust_root</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$immediate</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$assoc_handle</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$server</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#returnToVerified" title="details" class="method-name">returnToVerified</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#trustRootValid" title="details" class="method-name">trustRootValid</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$immediate" id="$immediate"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$immediate</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">723</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Whether this request is for immediate mode.</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$mode" id="$mode"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$mode</span>
+			 = <span class="var-default"> &quot;checkid_setup&quot;</span>			(line <span class="line-number">718</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The mode of this request.</p>
+	
+	
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../OpenID/Auth_OpenID_Request.html#var$mode">Auth_OpenID_Request::$mode</a></dt>
+					</dl>
+		
+		
+
+</div>
+<a name="var$namespace" id="$namespace"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$namespace</span>
+						(line <span class="line-number">734</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The OpenID namespace for this request.</p>
+<p class="description"><p>deprecated since version 2.0.2</p></p>
+	
+	
+		
+		
+
+</div>
+<a name="var$trust_root" id="$trust_root"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$trust_root</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">728</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The trust_root value for this request.</p>
+	
+	
+		
+		
+
+</div>
+<a name="var$verifyReturnTo" id="$verifyReturnTo"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$verifyReturnTo</span>
+			 = <span class="var-default"> 'Auth_OpenID_verifyReturnTo'</span>			(line <span class="line-number">713</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return-to verification callback.  Default is  Auth_OpenID_verifyReturnTo from TrustRoot.php.</p>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodAuth_OpenID_CheckIDRequest" id="Auth_OpenID_CheckIDRequest"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor Auth_OpenID_CheckIDRequest</span> (line <span class="line-number">765</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">Auth_OpenID_CheckIDRequest</span>
+		<span class="method-name">
+			Auth_OpenID_CheckIDRequest
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$identity</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$return_to</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$trust_root</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$immediate</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$assoc_handle</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$server</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$claimed_id</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$identity</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$return_to</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$trust_root</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$immediate</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$assoc_handle</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$server</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$claimed_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodanswer" id="answer"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">answer</span> (line <span class="line-number">972</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Respond to this request.  Return either an  <a href="../OpenID/Auth_OpenID_ServerResponse.html">Auth_OpenID_ServerResponse</a> or  <a href="../OpenID/Auth_OpenID_ServerError.html">Auth_OpenID_ServerError</a>.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			answer
+		</span>
+					(<span class="var-type">bool</span>&nbsp;<span class="var-name">$allow</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$server_url</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$identity</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$claimed_id</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$allow</span><span class="var-description">: Allow this user to claim this identity, and  allow the consumer to have this information?</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$server_url</span><span class="var-description">: <p>DEPRECATED.  Passing $op_endpoint to  the <a href="../OpenID/Auth_OpenID_Server.html">Auth_OpenID_Server</a> constructor makes this optional.</p><p>When an OpenID 1.x immediate mode request does not succeed, it  gets back a URL where the request may be carried out in a  not-so-immediate fashion.  Pass my URL in here (the fully  qualified address of this server's endpoint, i.e.  http://example.com/server), and I will use it as a base for the  URL for a new request.</p><p>Optional for requests where <a href="../OpenID/Auth_OpenID_CheckIDRequest.html#var$immediate">$immediate</a> is false or  $allow is true.</p></span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$identity</span><span class="var-description">: The OP-local identifier to answer with.  Only for use when the relying party requested identifier  selection.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$claimed_id</span><span class="var-description">: <p>The claimed identifier to answer  with, for use with identifier selection in the case where the  claimed identifier and the OP-local identifier differ,  i.e. when the claimed_id uses delegation.</p><p>If $identity is provided but this is not, $claimed_id will  default to the value of $identity.  When answering requests  that did not ask for identifier selection, the response  $claimed_id will default to that of the request.</p><p>This parameter is new in OpenID 2.0.</p></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodencodeToURL" id="encodeToURL"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">encodeToURL</span> (line <span class="line-number">1124</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			encodeToURL
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$server_url</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$server_url</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodequals" id="equals"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">equals</span> (line <span class="line-number">791</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			equals
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$other</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$other</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfromMessage" id="fromMessage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">fromMessage</span> (line <span class="line-number">823</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			fromMessage
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$message</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$server</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$message</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$server</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetCancelURL" id="getCancelURL"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getCancelURL</span> (line <span class="line-number">1158</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getCancelURL
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodidSelect" id="idSelect"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">idSelect</span> (line <span class="line-number">906</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			idSelect
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodmake" id="make"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">make</span> (line <span class="line-number">736</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			make
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$message</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$identity</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$return_to</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$trust_root</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$immediate</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$assoc_handle</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$server</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$message</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$identity</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$return_to</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$trust_root</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$immediate</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$assoc_handle</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$server</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreturnToVerified" id="returnToVerified"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">returnToVerified</span> (line <span class="line-number">817</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			returnToVerified
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtrustRootValid" id="trustRootValid"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">trustRootValid</span> (line <span class="line-number">913</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			trustRootValid
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 21 Apr 2009 11:31:32 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page Nonce.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/Auth/OpenID/Nonce.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+									<a href="#sec-includes">Includes</a>
+			|							<a href="#sec-constants">Constants</a>
+			|									<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Nonce-related functionality.</p>
+		
+			</div>
+</div>
+		
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Includes</span>
+			|							<a href="#sec-constants">Constants</a>
+				|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="_Auth/OpenID/CryptUtil_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require_once</span>
+			(<span class="include-name">'Auth/OpenID/CryptUtil.php'</span>)
+			(line <span class="line-number">12</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Need CryptUtil to generate random strings.</p>
+	
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|						<span class="disabled">Constants</span>
+			|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="defineAuth_OpenID_Nonce_CHRS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">Auth_OpenID_Nonce_CHRS</span> = &quot;abcdefghijklmnopqrstuvwxyz&quot;.&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&quot;
+			(line <span class="line-number">17</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This is the characters that the nonces are made from.</p>
+	
+		
+</div>
+<a name="defineAuth_OpenID_Nonce_REGEX"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">Auth_OpenID_Nonce_REGEX</span> = '/(\d{4})-(\d\d)-(\d\d)T(\d\d):(\d\d):(\d\d)Z(.*)/'
+			(line <span class="line-number">26</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineAuth_OpenID_Nonce_TIME_FMT"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">Auth_OpenID_Nonce_TIME_FMT</span> = '%Y-%m-%dT%H:%M:%SZ'
+			(line <span class="line-number">29</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|									<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionAuth_OpenID_checkTimestamp" id="functionAuth_OpenID_checkTimestamp"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_checkTimestamp</span> (line <span class="line-number">59</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Auth_OpenID_checkTimestamp
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$nonce_string</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$allowed_skew</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$now</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$nonce_string</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$allowed_skew</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$now</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionAuth_OpenID_mkNonce" id="functionAuth_OpenID_mkNonce"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_mkNonce</span> (line <span class="line-number">93</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Auth_OpenID_mkNonce
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$when</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$when</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionAuth_OpenID_splitNonce" id="functionAuth_OpenID_splitNonce"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_splitNonce</span> (line <span class="line-number">32</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Auth_OpenID_splitNonce
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$nonce_string</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$nonce_string</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 21 Apr 2009 11:31:32 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,4 @@
+#User-agent: *
+#Disallow:
+
+Sitemap: http://rechnik.chitanka.info/sitemap.xml

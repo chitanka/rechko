@@ -1,0 +1,2 @@
+all:
+  enabled_modules: [feedback]

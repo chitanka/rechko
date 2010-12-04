@@ -1,0 +1,233 @@
+sfPHPOpenIDPlugin symfony plugin
+================================
+
+Overview
+--------
+
+sfPHPOpenIDPlugin is a Symfony plugin which can be used by Symfony applications to authenticate users using OpenID system. With this plugin Symfony applications become OpenID consumer (or relying party).
+It uses the PHP OpenID library (http://openidenabled.com/php-openid) which brings support for OpenID 1.0 and 2.0 specifications with Simple Registration, Attribute Exchange and PAPE extensions.
+
+Based on sfPHPOpenIDExtPlugin v1.0.1.
+
+Changelog
+---------
+
+See the CHANGELOG file.
+
+License
+-------
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+Installation
+------------
+
+* Install the plugin
+
+    From Symfony official channel:
+
+        php symfony plugin:install  sfPHPOpenIdPlugin
+
+    or from a downloaded archive:
+
+        php symfony plugin:install /home/path/to/downloads/sfPHPOpenIdPlugin-1.1.0.tgz
+
+* You must tell to the plugin where is the lib. So edit the file /yourProject/apps/yourApp/config/app.yml and add the following lines:
+
+         all:
+           <other app specific data>
+           sf_phpopenid_plugin:
+             lib_path: %SF_ROOT_DIR%/lib/php-openid
+
+
+Don't forget to adapt the last line to your installation.
+
+Update instructions
+--------------------
+
+Version 1.1 introduces many changes in the code. So update from version 1.0 requires a bit of tweaking. Here are a few guidelines to help you.
+
+* There's no longer the need to enable sfPHPOpenIDAuth module. So remove the corresponding line in yourApp/config/settings.yml.
+
+* openid_signin and openid_autosignin routes and corresponding actions are no longer defined inside the plugin. Briefly, in v1.0, your OpenID form submitted data directly to openid_signin and the corresponding plugin action displayed a waiting message ('Authentication in progress') with HTML redirect code. Now, to allow customization of waiting message, the form needs to submit data to another action in your app. This action will call method getRedirectHtml($theOpenIDURL) which will return html redirect code that you need to include in whatever template you want. It is the same principle for autosignin. See below for more details.
+
+
+Using the plugin
+----------------
+
+The plugin define a special action class (BasesfPHPOpenIDAuthActions) that handles all the OpenID authentification steps.
+To use the plugin, you have to create a new module (let's call it authModule) in your app (yourApp). The action class of this module should inherit from the plugin class BasesfPHPOpenIDAuthActions: edit authModule/actions/actions.class.php so that it looks like in the following lines:
+
+    class mainActions extends BasesfPHPOpenIDAuthActions {
+	    // Some code
+    }
+
+The next steps will focus on modifying this action class.
+
+* Routing
+
+The plugin uses a few predefined routes to redirect the user during the authentication procedure. Your app must define these routes in yourApp/config/routing.yml.
+This is the list of needed routes: homepage, openid_finishauth and openid_error.
+Your routing file should look like this:
+
+    openid_finishauth:
+      url: /authModule/finish
+      param: { module: authModule, action: finish }
+    openid_error:
+      url: /authModule/openidError
+      param: { module: authModule, action: openidError }
+
+As you can see, these routes are binded to actions of authModule. So let's talk a bit about these actions.
+
+* Actions
+
+As said earlier, authModule's action class inherit from the class BasesfPHPOpenIDAuthActions.
+This base class already define one needed action: executeFinish().
+Most of the time you won't have to override this method unless you have specific needs.
+The action openidError is not defined in BasesfPHPOpenIDAuthActions, so you have to write it. This action will be called by the plugin when an error occurs while authenticating a user (wrong password, user cancelling). Here's an example of code you can write in this action:
+
+    public function executeOpenidError() {
+      $this->error = $this->getRequest() ->getErrors();
+    }
+
+You'll probably want to create a template for this action (openidErrorSuccess) to display the error message.
+
+Now that we're sure these actions are defined, we have to override another method: openIDCallback. These method is called when a user is successfully authenticated. This is the perfect place to do any action needed by your app (setting cookies, displaying welcome message).
+You have two choices for this action: you can forward or redirect to another action (go to the homepage for example). The other option is to let it return without any redirection. If you do so, you'll have to create a finishSuccess.php template in your authModule (because openIDCallback is in fact called by executeFinish action).
+Here's an example of openIDCallback code:
+
+    public function openIDCallback($openid_validation_result)
+    {
+      $this->getUser()->setAuthenticated(true);
+      sfContext::getInstance()->getResponse()->setCookie('known_openid_identity',$openid_validation_result['identity']);
+      $back = '@homepage';
+      $this->redirect($back);
+    }
+
+As you can see, the method is given an attribute ($openid_validation_result) containing information about the authenticated user. Its content is:
+
+    'result' => 'result code',
+    'message' => 'an optional message',
+    'identity' => 'the user's identity (http://misterx.myopenid.com)',
+    'userData' => 'array of user fields values ('fullname' => array('the fullname', 'another fullname'), 'email' => array('the email'), ...)'}
+    'PAPEResp' => 'a Auth_OpenID_PAPE_Response object (null if the provider didn't send a PAPE response)'
+
+
+* User interaction
+
+Now that we have defined the routing and actions, we must focus on the way to use it in our app. The classical workflow when using OpenID is to ask the user to fill a form with his OpenID (http://misterx.myopenidprovider.com for example). The user then submit the form. It gets redirect to his provider, tries to authenticate and gets back to the application.
+For the first step, just create a form wherever in your application. The form will submit the data to one of your app action.
+The plugin comes with an openID validator (sfPHPOpenIdValidator) to check openid urls. It takes no specific options and may throw 'invalid' or 'required' error messages.
+
+In the action where the form submit the OpenID URL, you have to call a plugin method named "getRedirectHtml". This method check the given OpenID and returns html code for redirection if the identity is valid. It takes the following arguments:
+
+    @param $identity     The OpenID the user want to login with
+    @param $immediate    Should this be an immediate login (ie provider should answer yes or no without showing any form, used for autosignin)
+    @param $submitLabel  The value of the submit button that will be displayed if javascript is disabled. Optional, default is 'Continue'.
+    @param $linkLabel    The label of the link that will be displayed if javascript is disabled. Optional, default is 'Click here to continue login with OpenID.'.
+    @param $linkAttrs    An array of attributes of the link that will be displayed if javascript is disabled. Optional.
+
+And it returns the following value:
+
+    array(
+         'success' => true or false,
+         'error' => An error message if success is false,
+         'htmlCode' => The html code performing redirection (html link or form, hidden if javascript is on). To be included in the template. Empty if success is false.
+         )
+
+The only thing you have to do is including the htmlCode in your template (unless success is false). Once this is done, you have completed the first step of the OpenID workflow. The user will be redirected to his provider.
+The next step is when the provider gets the user back to our application after user authentication (successful or not). The action invoked in this step is openid_finishauth, which is already defined in the plugin. In case of success, it calls your openIDCallback method to let you do your app specific treatments. On failure, it redirects to openid_error route.
+
+Other related features
+----------------------
+
+* Redirection after successful signin
+
+After a successful OpenID authentication, the user gets automatically redirected to the openid_finishauth route. However, you might want after this step to bring back the user to the page he was viewing before the authentication procedure. A possible solution to this problem is the following.
+First, in authModule actions file, before calling getRedirectHtml method, insert the following code:
+
+      $this->getUser()->setAttribute('openid_real_back_url', $this->getRequest()->getReferer());
+
+The previous page url will be stored in user's session. The only thing to do after this is to modify your openIDCallback to redirect the user to this url:
+
+      public function openIDCallback($openid_validation_result)
+      {
+      // ...App specific code...
+      $back = $this->getUser()->getAttribute('openid_real_back_url');
+      $this->getUser()->getAttributeHolder()->remove('openid_real_back_url');
+      if (empty($back))
+        $back = '@homepage';
+      $this->redirect($back);
+      }
+
+* Automatic signin
+
+For the moment we have only talked about authenticating for a single session. But the user might want to automatically signin with his OpenID every time he visits your application.
+To do this, we're going to use cookies and a special type of OpenID request.
+OpenID provides a way to ask a provider an instant response for a user authentication. Usually, a user can ask his OpenID provider to remember him and to always allow your application to access his profile. When asking an instant response, we send to the provider the OpenID of the user. The provider will then try to authenticate the user without any interaction from him. If it needs more info (like a password), it will not ask the user but simply get back to the application with a corresponding response code.
+This is how we can use this procedure in our application : upon a successful authentication, in your openIDCallback method, store the user's OpenID identity in a cookie:
+
+    sfContext::getInstance()->getResponse()->setCookie('known_openid_identity',$openid_validation_result['identity']);
+  
+Now suppose the user goes away and come back a few days later. We found his identity in the 'known_openid_identity' cookie. So your application can use it and ask the provider to authenticate the user transparently.
+This check must be done on every page the user may visit. So we're going to use a filter to do this treatment. Add the following code to yourApp/lib/rememberFilter.class.php:
+
+    class rememberFilter extends sfFilter
+    {
+      public function execute($filterChain)
+      {
+        // Filters don't have direct access to the request and user objects.
+        // You will need to use the context object to get them
+        $request = $this->getContext()->getRequest();
+        $user    = $this->getContext()->getUser();
+        // Execute this filter only once
+        if ($this->isFirstCall() && !$user->isAuthenticated() && ($user->getAttribute('openid_triedAutoLog') != 'yes'))
+        {
+          $user->setAttribute('openid_triedAutoLog', 'yes'); // Don't come back here anymore for this session
+          $cookie = $request->getCookie('known_openid_identity');
+          if (!empty($cookie)) {
+            $user->setAttribute('openid_url', $cookie);
+            return $this->getContext()->getController()->forward('authModule', 'autoSignin');
+          }
+        }
+        // Execute next filter
+        $filterChain->execute();
+      }
+    }
+
+Notice that when we try to auto signin, we use the autoSignin action from authModule. This action needs to be defined in your app. It should be quite similar to signin action except getRedirectHtml method should be called with $immediate argument set to true.
+Now activate this filter by editing yourApp/config/filters.yml:
+
+    remember:
+      class: rememberFilter
+    rendering: ~
+    security:  ~
+    # insert your own filters here
+    cache:     ~
+    common:    ~
+    execution: ~
+
+We have to be sure that we don't try to automatically signin when not needed. So upon logout, we should delete the cookie (in your logout action):
+
+    $this->getResponse()->setCookie('known_openid_identity', '');
+
+The same line should be added to your authModule's openidError action too: there is no need to retry endlessly to automatically signin when it has already failed.
+
+* OpenID parameters and extensions
+
+The default behaviour of this plugin is to ask user's fullname and email with the Simple Registration (SREG) and Attribute Exchange (AX) specifications. However, you might want to get other user's data (date of birth, nickname, ...) using SREG or AX. You might also want to use PAPE extension to specify an authentication method.
+All of this can be done with this plugin. The only thing to do is to override a method in your authModule action class: setOpenIDRequestParameters(sfPHPOpenID $openid_object). In this method, you get a sfPHPOpenID object as parameter which can be used to change the OpenID request. These are the methods you can call on this object:
+
+    getAvailablePAPEPolicies() -> Returns an array of available PAPE policy URIs
+    setPAPEPolicies($uris) -> Set the PAPE policy URIs (adding to the ones already set)
+    setRequestFields($fields) -> Sets the fields that should be retrieved from the user openid account.
+
+For more detail on these methods, look at the code in sfPHPOpenIDPlugin/lib/sfPHPOpenId.class.php.
+
+For example, in the following example, we ask for another user data: his nickname.
+
+    protected function setOpenIDRequestParameters(sfPHPOpenID $openid_object) {
+        $openid_object->setRequestFields(array('nickname'));
+    }
+

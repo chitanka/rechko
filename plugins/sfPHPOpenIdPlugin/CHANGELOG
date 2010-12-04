@@ -1,0 +1,10 @@
+v.1.1 (August 7th 2009)
+-Dropped dependance to sfCompat10Plugin. This is now a real Symfony 1.2 plugin.
+-Make it easier to customize 'authentication in progress' page.
+-Fixed a bug in AX data retrieving.
+-Few cleanups
+
+
+v.1.0 (April 2009)
+
+First release

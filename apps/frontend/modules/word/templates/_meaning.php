@@ -1,0 +1,1 @@
+<?php echo format_meaning($word['meaning']) ?>

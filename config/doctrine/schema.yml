@@ -1,0 +1,227 @@
+AbstractWord:
+  columns:
+    name:                string(100)
+    name_stressed:       string(100)
+    name_broken:         string(120)
+    name_condensed:      string(80)
+    corpus_count:        integer
+    corpus_percent:      float
+    corpus_rank:         integer(3)
+  indexes:
+    condensed:
+      fields:       [name_condensed]
+
+
+Word:
+  inheritance:
+    type:          concrete
+    extends:       AbstractWord
+  actAs: [SoftDelete]
+  columns:
+    id:             { type: integer(3), primary: true, autoincrement: true }
+    meaning:        clob
+    synonyms:       clob
+    # за съществителни:
+    # обикновено (default) | сингулария тантум
+    # за глаголи:
+    # личени (default) | безличен
+    # обикновен (невъзвратен) (default) | възвратен
+    classification:      string
+    type_id:             integer(2)
+    pronounciation:      string(100)
+    etymology:           clob
+    related_words:       clob
+    derived_words:       clob
+    search_count:        { type: integer, default: 0 }
+    source:
+      type:     enum
+      default:  user
+      values:
+        - bgoffice
+        - eurodict
+        - idi
+        - onlinerechnik
+        - user
+    other_langs:         string
+  relations:
+    Type:
+      class:        WordType
+      local:        type_id
+      foreignAlias: Words
+  indexes:
+    name_type:
+      fields:       [name, type_id]
+      type:         unique
+    search:
+      fields:       [search_count]
+
+
+WordType:
+  columns:
+    id:             { type: integer(2), primary: true, autoincrement: true }
+    name:           string(10)
+    idi_number:     { type: integer(2), unsigned: true }
+    speech_part:    string(60)
+    comment:        clob
+    rules:          clob
+    rules_test:     clob
+    example_word:   string(100)
+
+
+IncorrectForm:
+  actAs: [SoftDelete]
+  columns:
+    name:            string(100)
+    correct_word_id: integer(3)
+    search_count:    { type: integer, default: 0 }
+  relations:
+    CorrectWord:
+      class:        Word
+      local:        correct_word_id
+      foreignAlias: IncorrectForms
+      onDelete:     CASCADE
+  indexes:
+    name:
+      fields:       [name]
+    name_correct:
+      fields:       [name, correct_word_id]
+    search:
+      fields:       [search_count]
+
+
+DerivativeForm:
+  inheritance:
+    type:          concrete
+    extends:       AbstractWord
+  columns:
+    description:     string(150)
+    is_infinitive:   { type: boolean, default: false }
+    base_word_id:    integer(3)
+    search_count:    { type: integer, default: 0 }
+  relations:
+    BaseWord:
+      class:        Word
+      local:        base_word_id
+      foreignAlias: DerivativeForms
+      onDelete:     CASCADE
+  indexes:
+    name:
+      fields:       [name]
+    search:
+      fields:       [search_count]
+
+
+WordTranslation:
+  columns:
+    word_id:         integer(3)
+    lang:            string(3)
+    content:         clob
+    source:
+      type:     enum
+      default:  user
+      values:
+        - eurodict
+        - user
+  indexes:
+    word_lang:
+      fields:        [word_id, lang]
+      type:          unique
+  relations:
+    Word:
+      local:         word_id
+      foreignAlias:  Translations
+
+
+Revision:
+  actAs:
+    Timestampable:
+      updated:
+        disabled:    true
+  columns:
+    field:           string(20)
+    old_value:       clob
+    new_value:       clob
+    user_id:         integer(4)
+    is_pattrolled:   { type: boolean, default: false }
+  relations:
+    User:
+      class:        sfGuardUser
+      local:        user_id
+      foreignAlias: Revisions
+  indexes:
+    field:
+      fields:       [field]
+    is_pattrolled:
+      fields:       [is_pattrolled]
+
+
+WordRevision:
+  inheritance:
+    type:          concrete
+    extends:       Revision
+  columns:
+    object_id:       integer(3)
+  relations:
+    Word:
+      foreignAlias: Revisions
+      local:        object_id
+      foreign:      id
+
+
+IncorrectFormRevision:
+  inheritance:
+    type:          concrete
+    extends:       Revision
+  columns:
+    object_id:        integer
+  relations:
+    IncorrectForm:
+      foreignAlias: Revisions
+      local:        object_id
+      foreign:      id
+
+
+
+FormCorpusSentence:
+  columns:
+    form_id:      { type: integer, primary: true }
+    sentence_id:  { type: integer, primary: true }
+
+CorpusSentence:
+  columns:
+    content:    clob
+    text:       string
+    file:       string
+    line:       integer(3)
+    position:   integer(4)
+
+
+ForeignWord:
+  columns:
+    name:            string(100)
+    translation:     clob
+    lang:            string(2)
+    source:
+      type:     enum
+      values:
+        - eurodict
+        - user
+  indexes:
+    name_lang:
+      fields:       [name, lang]
+      type:         unique
+    lang:
+      fields:       [lang]
+
+
+sfGuardUserProfile:
+  columns:
+    user_id:          integer(4)
+    realname:         string(60)
+    email:            string(60)
+  relations:
+    sfGuardUser:
+      local:          user_id
+      foreignType:    one
+      foreignAlias:   Profile
+      onDelete:       CASCADE

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Auth_OpenID_NamespaceMap</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Auth_OpenID_NamespaceMap</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Maintains a bijective map between namespace uris and aliases.</p>
+		<p class="notes">
+			Located in <a class="field" href="_Auth---OpenID---Message.php.html">/Auth/OpenID/Message.php</a> (line <span class="field">276</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																						
+				<div class="method-definition">
+											<span class="method-result">Auth_OpenID_NamespaceMap</span>
+										<a href="#Auth_OpenID_NamespaceMap" title="details" class="method-name">Auth_OpenID_NamespaceMap</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#add" title="details" class="method-name">add</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$namespace_uri</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#addAlias" title="details" class="method-name">addAlias</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$namespace_uri</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$desired_alias</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$implicit</span> = <span class="var-default">false</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#contains" title="details" class="method-name">contains</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$namespace_uri</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getAlias" title="details" class="method-name">getAlias</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$namespace_uri</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getNamespaceURI" title="details" class="method-name">getNamespaceURI</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$alias</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#isDefined" title="details" class="method-name">isDefined</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$namespace_uri</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#isImplicit" title="details" class="method-name">isImplicit</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$namespace_uri</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#iterAliases" title="details" class="method-name">iterAliases</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#iteritems" title="details" class="method-name">iteritems</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#iterNamespaceURIs" title="details" class="method-name">iterNamespaceURIs</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodAuth_OpenID_NamespaceMap" id="Auth_OpenID_NamespaceMap"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor Auth_OpenID_NamespaceMap</span> (line <span class="line-number">277</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">Auth_OpenID_NamespaceMap</span>
+		<span class="method-name">
+			Auth_OpenID_NamespaceMap
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodadd" id="add"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">add</span> (line <span class="line-number">371</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			add
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$namespace_uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$namespace_uri</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddAlias" id="addAlias"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">addAlias</span> (line <span class="line-number">316</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addAlias
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$namespace_uri</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$desired_alias</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$implicit</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$namespace_uri</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$desired_alias</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$implicit</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcontains" id="contains"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">contains</span> (line <span class="line-number">398</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			contains
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$namespace_uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$namespace_uri</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAlias" id="getAlias"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getAlias</span> (line <span class="line-number">284</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getAlias
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$namespace_uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$namespace_uri</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetNamespaceURI" id="getNamespaceURI"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getNamespaceURI</span> (line <span class="line-number">289</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getNamespaceURI
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$alias</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$alias</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisDefined" id="isDefined"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">isDefined</span> (line <span class="line-number">403</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			isDefined
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$namespace_uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$namespace_uri</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisImplicit" id="isImplicit"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">isImplicit</span> (line <span class="line-number">311</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			isImplicit
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$namespace_uri</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$namespace_uri</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoditerAliases" id="iterAliases"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">iterAliases</span> (line <span class="line-number">300</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			iterAliases
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoditeritems" id="iteritems"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">iteritems</span> (line <span class="line-number">306</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			iteritems
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoditerNamespaceURIs" id="iterNamespaceURIs"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">iterNamespaceURIs</span> (line <span class="line-number">294</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			iterNamespaceURIs
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 21 Apr 2009 11:31:31 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</div></body>
+</html>

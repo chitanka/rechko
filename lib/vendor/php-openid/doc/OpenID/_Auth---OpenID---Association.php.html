@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page Association.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/Auth/OpenID/Association.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|													<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This module contains code for dealing with associations between  consumers and servers.</p>
+<p class="description"><p>PHP versions 4 and 5</p><p>LICENSE: See the COPYING file included in this distribution.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> JanRain, Inc. &lt;<a href="mailto:openid@janrain.com">openid@janrain.com</a>&gt;</li>
+				<li><span class="field">copyright:</span> 2005-2008 Janrain, Inc.</li>
+				<li><span class="field">license:</span> <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|																<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../OpenID/Auth_OpenID_Association.html">Auth_OpenID_Association</a>
+					</td>
+					<td>
+											This class represents an association between a server and a  consumer.  In general, users of this library will never see  instances of this object.  The only exception is if you implement a  custom <a href="../OpenID/Auth_OpenID_OpenIDStore.html">Auth_OpenID_OpenIDStore</a>.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../OpenID/Auth_OpenID_SessionNegotiator.html">Auth_OpenID_SessionNegotiator</a>
+					</td>
+					<td>
+											A session negotiator controls the allowed and preferred association  types and association session types. Both the <a href="../OpenID/Auth_OpenID_Consumer.html">Auth_OpenID_Consumer</a> and <a href="../OpenID/Auth_OpenID_Server.html">Auth_OpenID_Server</a> use  negotiators when creating associations.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionAuth_OpenID_checkSessionType" id="functionAuth_OpenID_checkSessionType"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_checkSessionType</span> (line <span class="line-number">421</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Auth_OpenID_checkSessionType
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$assoc_type</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$session_type</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$assoc_type</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$session_type</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionAuth_OpenID_getAllAssociationTypes" id="functionAuth_OpenID_getAllAssociationTypes"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_getAllAssociationTypes</span> (line <span class="line-number">392</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Auth_OpenID_getAllAssociationTypes
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionAuth_OpenID_getDefaultAssociationOrder" id="functionAuth_OpenID_getDefaultAssociationOrder"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_getDefaultAssociationOrder</span> (line <span class="line-number">431</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Auth_OpenID_getDefaultAssociationOrder
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionAuth_OpenID_getDefaultNegotiator" id="functionAuth_OpenID_getDefaultNegotiator"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_getDefaultNegotiator</span> (line <span class="line-number">472</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			&amp;Auth_OpenID_getDefaultNegotiator
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionAuth_OpenID_getEncryptedNegotiator" id="functionAuth_OpenID_getEncryptedNegotiator"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_getEncryptedNegotiator</span> (line <span class="line-number">479</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			&amp;Auth_OpenID_getEncryptedNegotiator
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionAuth_OpenID_getOnlyEncryptedOrder" id="functionAuth_OpenID_getOnlyEncryptedOrder"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_getOnlyEncryptedOrder</span> (line <span class="line-number">452</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Auth_OpenID_getOnlyEncryptedOrder
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionAuth_OpenID_getSecretSize" id="functionAuth_OpenID_getSecretSize"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_getSecretSize</span> (line <span class="line-number">381</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Auth_OpenID_getSecretSize
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$assoc_type</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$assoc_type</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionAuth_OpenID_getSessionTypes" id="functionAuth_OpenID_getSessionTypes"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_getSessionTypes</span> (line <span class="line-number">408</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Auth_OpenID_getSessionTypes
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$assoc_type</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$assoc_type</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionAuth_OpenID_getSupportedAssociationTypes" id="functionAuth_OpenID_getSupportedAssociationTypes"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">Auth_OpenID_getSupportedAssociationTypes</span> (line <span class="line-number">397</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Auth_OpenID_getSupportedAssociationTypes
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 21 Apr 2009 11:31:28 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.2</a>
+	</p>
+	</div></body>
+</html>
