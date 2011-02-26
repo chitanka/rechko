@@ -18,7 +18,7 @@
 
 <p>Тълковната информация на думите е взета от речниците <a href="http://eurodict.com/">eurodict.com</a> и <a href="http://www.onlinerechnik.com/">onlinerechnik.com</a>.</p>
 
-<p>Словоформите са генерирани с помощта на данни от програмата <a href="http://ididictionary.com/bulgarian_spell_checker/">IDI Spell Checker</a>, които пък са базирани на данни от <a href="http://bgoffice.sourceforge.net/">проекта БГ Офис</a>. От БГ Офис идва и синонимната база.</p>
+<p>Словоформите са генерирани с помощта на данни от програмата <a href="http://freeplace.info/ididictionary/bulgarian_spell_checker/">IDI Spell Checker</a>, които пък са базирани на данни от <a href="http://bgoffice.sourceforge.net/">проекта БГ Офис</a>. От БГ Офис идва и синонимната база.</p>
 
 <p>Грешните изписвания на думите са създадени автоматично.</p>
 
