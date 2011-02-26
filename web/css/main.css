@@ -1,8 +1,11 @@
 html,body,div,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,dl{margin:0;padding:0}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
 
 body {
-	padding: 2.5em 1em 0 1em;
 	line-height: 1.5em;
+}
+#content-wrapper {
+	position: relative;
+	padding: 2.5em 1em 0 1em;
 }
 
 h1, h2, h3, h4 {
@@ -453,4 +456,50 @@ input.openid {
 .ac_over {
 	background-color: #193F00;
 	color: white;
+}
+
+
+#project-links ul {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #bbb;
+	background-color: #cbcbcb;
+	background-image: -moz-linear-gradient(top, #e8e8e8, #cbcbcb);
+	color: black;
+	text-align: center;
+}
+#project-links li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border-right: 1px #818181 solid;
+	-moz-box-shadow: 1px 1px 1px #bbb;
+	-webkit-box-shadow: 1px 1px 1px #bbb;
+	box-shadow: 1px 1px 1px #bbb;
+	list-style-type: none;
+	text-align: center;
+	font-variant: small-caps;
+}
+#project-links li a {
+	display: block;
+	width: 7em;
+	padding: .2em .3em 0 .3em;
+	background-color: #dadada;
+	background-image: -moz-linear-gradient(top, #ddd, #ddd 35%, #999);
+	color: #292929;
+	text-shadow: 1px 1px 0 #e8e8e8;
+	text-decoration: none;
+}
+#project-links li.current a {
+	background-color: #555;
+	background-image: -moz-linear-gradient(top, #555, #888);
+	color: #e8e8e8;
+	text-shadow: 1px 1px 0 black;
+}
+#project-links li:hover a {
+	background-color: #333;
+	background-image: -moz-linear-gradient(top, #333, #4c4c4c);
+	color: #e8e8e8;
+	text-shadow: 1px 1px 0 black;
+	text-decoration: none;
 }

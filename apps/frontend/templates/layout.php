@@ -22,26 +22,39 @@
 	<?php include_stylesheets() ?>
 </head>
 
-<body class="module-<?php echo $this->getModuleName() ?> action-<?php echo $this->getActionName() ?>">
+<body>
 
-	<?php include_slot('header') ?>
-
-	<?php if (has_slot('title')): ?>
-		<h1 id="first-heading"><?php include_slot('title') ?></h1>
-	<?php endif ?>
-	<div id="sitename">
-		<?php if ( ! include_slot('sitename') ): ?>
-			<p><?php echo link_to(sfConfig::get('app_sitename'), '@homepage') ?></p>
-		<?php endif ?>
+	<div id="project-links">
+		<ul>
+			<li id="project-main"><a href="http://chitanka.local">Библиотека</a></li>
+			<li id="project-forum"><a href="http://forum.chitanka.local">Форум</a></li>
+			<li id="project-blog"><a href="http://blog.chitanka.local">Блог</a></li>
+			<li id="project-wiki"><a href="http://wiki.chitanka.local">Уики</a></li>
+			<li id="project-rechnik" class="current"><a href="http://rechnik.chitanka.local">Речник</a></li>
+			<li id="project-tools"><a href="http://tools.chitanka.local">Инструменти</a></li>
+		</ul>
 	</div>
 
-	<div id="content"><?php echo $sf_content ?></div>
+	<div id="content-wrapper" class="module-<?php echo $this->getModuleName() ?> action-<?php echo $this->getActionName() ?>">
+		<?php include_slot('header') ?>
 
-	<?php include_partial('global/personal') ?>
+		<?php if (has_slot('title')): ?>
+			<h1 id="first-heading"><?php include_slot('title') ?></h1>
+		<?php endif ?>
+		<div id="sitename">
+			<?php if ( ! include_slot('sitename') ): ?>
+				<p><?php echo link_to(sfConfig::get('app_sitename'), '@homepage') ?></p>
+			<?php endif ?>
+		</div>
 
-	<?php if ( ! include_slot('footer') ): ?>
-		<?php include_partial('global/footer') ?>
-	<?php endif ?>
+		<div id="content"><?php echo $sf_content ?></div>
+
+		<?php include_partial('global/personal') ?>
+
+		<?php if ( ! include_slot('footer') ): ?>
+			<?php include_partial('global/footer') ?>
+		<?php endif ?>
+	</div>
 
 	<?php include_javascripts() ?>
 </body>
