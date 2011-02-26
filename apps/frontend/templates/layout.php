@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="bg" lang="bg">
+<html lang="bg">
 
 <head>
 	<?php use_stylesheet('main') ?>
@@ -26,12 +26,12 @@
 
 	<div id="project-links">
 		<ul>
-			<li id="project-main"><a href="http://chitanka.local">Библиотека</a></li>
-			<li id="project-forum"><a href="http://forum.chitanka.local">Форум</a></li>
-			<li id="project-blog"><a href="http://blog.chitanka.local">Блог</a></li>
-			<li id="project-wiki"><a href="http://wiki.chitanka.local">Уики</a></li>
-			<li id="project-rechnik" class="current"><a href="http://rechnik.chitanka.local">Речник</a></li>
-			<li id="project-tools"><a href="http://tools.chitanka.local">Инструменти</a></li>
+			<li id="project-main"><a href="http://chitanka.info">Библиотека</a></li>
+			<li id="project-forum"><a href="http://forum.chitanka.info">Форум</a></li>
+			<li id="project-blog"><a href="http://blog.chitanka.info">Блог</a></li>
+			<li id="project-wiki"><a href="http://wiki.chitanka.info">Уики</a></li>
+			<li id="project-rechnik" class="current"><a href="http://rechnik.chitanka.info">Речник</a></li>
+			<li id="project-tools"><a href="http://tools.chitanka.info">Инструменти</a></li>
 		</ul>
 	</div>
 
