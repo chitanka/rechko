@@ -61,7 +61,8 @@ class MyI18nToolkit
 
 	static public function condenseWord($name)
 	{
-		return strtr($name, array(
+		$name = mb_strtolower($name, 'UTF-8');
+		$name = strtr($name, array(
 			'а' => '', 'о' => '', 'е' => '',
 			'ъ' => '', 'у' => '', 'и' => '',
 			'й' => '', 'ю' => '', 'я' => '', 'ь' => '',
@@ -69,6 +70,8 @@ class MyI18nToolkit
 			'шт' => 'щ', 'дж' => 'ж',
 			'-' => '', ' ' => '',
 		));
+
+		return $name;
 	}
 
 
