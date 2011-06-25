@@ -51,7 +51,6 @@ Word:
   indexes:
     name_type:
       fields:       [name, type_id]
-      type:         unique
     search:
       fields:       [search_count]
 
