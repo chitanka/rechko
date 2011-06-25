@@ -7,7 +7,9 @@ class ProjectConfiguration extends sfProjectConfiguration
 {
 	public function setup()
 	{
-		define('Auth_OpenID_RAND_SOURCE', null);
+		if ( ! defined('Auth_OpenID_RAND_SOURCE')) {
+			define('Auth_OpenID_RAND_SOURCE', null);
+		}
 
 		$this->enablePlugins(array(
 			'sfDoctrinePlugin',
