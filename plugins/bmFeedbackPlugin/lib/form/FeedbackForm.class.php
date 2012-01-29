@@ -17,12 +17,16 @@ class FeedbackForm extends BaseForm
 			'email'   => new sfValidatorEmail(
 				array('required' => false),
 				array('invalid' => $messages['email']['invalid_msg'])),
-			'message' => new sfValidatorString(
-				array('min_length' => 5),
-				array(
-					'required' => $messages['message']['required_msg'],
-					'min_length' => $messages['message']['min_length_msg'],
-				)),
+			'message' => new sfValidatorAnd(array(
+				new sfValidatorString(
+					array('min_length' => 50),
+					array(
+						'required' => $messages['message']['required_msg'],
+						'min_length' => $messages['message']['min_length_msg'],
+					)
+				),
+				new bmValidatorSpam(),
+			)),
 		));
 
 		$this->widgetSchema->setLabels(array(
