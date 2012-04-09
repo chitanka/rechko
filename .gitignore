@@ -11,6 +11,5 @@ web/sitemaps/*
 web/uploads/*
 *.php~
 .DS_Store
-.sf
 *.tmp
 !.gitignore
