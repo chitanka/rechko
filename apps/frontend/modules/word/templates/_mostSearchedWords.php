@@ -6,5 +6,5 @@
    <li><?php echo link_to_word($word, null, false) ?> (<?php echo $word['search_count'] ?>)</li>
   <?php endforeach ?>
  </ul>
- </data>
+ </div>
 </div>
