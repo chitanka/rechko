@@ -5,7 +5,6 @@ apps/frontend/config/factories.yml
 cache/*
 log/*
 plugins/.*
-web/sf
 web/sitemap.xml
 web/sitemaps/*
 web/uploads/*
