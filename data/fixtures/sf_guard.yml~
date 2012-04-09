@@ -1,0 +1,8 @@
+sfGuardUser:
+  borislav:
+    username: http://borislav.manolov.myopenid.com
+    is_active: true
+    is_super_admin: true
+    Profile:
+      realname: Borislav Manolov
+      email:    b.manolov@gmail.com

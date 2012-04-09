@@ -9,7 +9,6 @@ web/sf
 web/sitemap.xml
 web/sitemaps/*
 web/uploads/*
-*.yml~
 *.php~
 .DS_Store
 .sf

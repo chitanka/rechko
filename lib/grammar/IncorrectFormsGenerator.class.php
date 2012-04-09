@@ -806,4 +806,6 @@ class IncorrectFormsGenerator
 яркос	яркост
 ярос	ярост
 яш	яж
+
+		print_r(IncorrectFormsGenerator::getIncorrectForms('абсу`рд'));
 */
