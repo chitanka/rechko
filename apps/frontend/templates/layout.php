@@ -11,6 +11,7 @@
 
 	<?php include_http_metas() ?>
 	<?php include_metas() ?>
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
 	<title>
 		<?php echo prepare_document_title(get_slot('title')) ?>
 		<?php if ( ! include_slot('sitename') ): ?>
