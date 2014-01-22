@@ -8,7 +8,7 @@ all:
 
   feedback:
     title:              Обратна връзка
-    thankyou:           Благодаря ви за коментара.
+    thankyou:           Благодарим ви за коментара.
 
     button:             Изпращане
     form:
