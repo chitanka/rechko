@@ -28,7 +28,7 @@ all:
     subject:            Обратна връзка от Речко
 
 
-  js_library:     http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js
+  js_library:     //ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js
 
   openid_cookie_expire:  180 # days
 

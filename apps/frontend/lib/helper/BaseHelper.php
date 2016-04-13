@@ -258,14 +258,14 @@ function link_to_translation($word, $lang, $text = '')
 
 function link_to_wikipedia($article)
 {
-	return sprintf('<a href="http://bg.wikipedia.org/wiki/%s"><i>%s</i> в Уикипедия</a>',
+	return sprintf('<a href="https://bg.wikipedia.org/wiki/%s"><i>%s</i> в Уикипедия</a>',
 		urlencode(str_replace(' ', '_', $article)),
 		$article);
 }
 
 function link_to_wiktionary($word)
 {
-	return sprintf('<a href="http://bg.wiktionary.org/wiki/%s"><b class="word">%s</b> в Уикиречник</a>',
+	return sprintf('<a href="https://bg.wiktionary.org/wiki/%s"><b class="word">%s</b> в Уикиречник</a>',
 		urlencode($word['name']),
 		$word['name']);
 }
