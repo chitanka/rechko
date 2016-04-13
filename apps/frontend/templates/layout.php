@@ -27,13 +27,12 @@
 
 	<div id="project-links">
 		<ul>
-			<li id="project-main"><a href="http://chitanka.info">Библиотека</a></li>
-			<li id="project-forum"><a href="http://forum.chitanka.info">Форум</a></li>
-			<li id="project-blog"><a href="http://blog.chitanka.info">Блог</a></li>
-			<li id="project-wiki"><a href="http://wiki.chitanka.info">Уики</a></li>
-			<li id="project-wiki-workroom"><a href="http://wiki.workroom.chitanka.info">Читалие</a></li>
-			<li id="project-rechnik" class="current"><a href="http://rechnik.chitanka.info">Речник</a></li>
-			<li id="project-tools"><a href="http://tools.chitanka.info">Инструменти</a></li>
+			<li id="project-main"><a href="//chitanka.info">Библиотека</a></li>
+			<li id="project-forum"><a href="//forum.chitanka.info">Форум</a></li>
+			<li id="project-wiki-workroom"><a href="//wiki.workroom.chitanka.info">Читалие</a></li>
+			<li id="project-rechnik" class="current"><a href="//rechnik.chitanka.info">Речник</a></li>
+			<li id="project-gramofonche"><a href="//gramofonche.chitanka.info">Грамофонче</a></li>
+			<li id="project-tools"><a href="//tools.chitanka.info">Инструменти</a></li>
 		</ul>
 	</div>
 
