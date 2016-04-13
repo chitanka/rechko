@@ -24,8 +24,10 @@
 
 <h2>Задвижващото ядро</h2>
 
-<p>Двигателят на системата е създаден с помощта на <a href="http://www.symfony-project.org">symfony</a> и <a href="http://www.doctrine-project.org">Doctrine</a>.</p>
+<p>Двигателят на системата е създаден с помощта на <a href="http://www.symfony-project.org">symfony 1</a> и <a href="http://www.doctrine-project.org">Doctrine 1</a>. Планира се нова версия, която ще бъде изградена върху Symfony2.</p>
 
-<h2>Сваляне</h2>
-
-<p>По-нататък ще бъде възможно пълното сваляне на речника за собствена употреба.</p>
+Скриптовете и базата са достъпни за сваляне:
+<ul>
+	<li><a href="https://github.com/chitanka/rechko">Скриптове</a></li>
+	<li><a href="/db.sql.gz">База от данни</a></li>
+</ul>
