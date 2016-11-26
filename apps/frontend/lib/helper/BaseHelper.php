@@ -48,15 +48,21 @@ function format_meaning($meaning)
 
 	$meaning = preg_replace('/\+(\S[^.]+\.)/U', '<i>$1</i>', $meaning);
 
-	$meaning = preg_replace('/\[\[w:([^]]+)\]\]/e', "link_to_wikipedia('$1')", $meaning);
-	$meaning = preg_replace('/\[\[([^]]+)\]\]/e', "link_to_word_by_name('$1')", $meaning);
+	$meaning = preg_replace_callback('/\[\[w:([^]]+)\]\]/', function($matches) {
+		return link_to_wikipedia($matches[1]);
+	}, $meaning);
+	$meaning = preg_replace_callback('/\[\[([^]]+)\]\]/', function($matches) {
+		return link_to_word_by_name($matches[1]);
+	}, $meaning);
 
 	return $meaning;
 }
 
 function format_synonyms($synonyms)
 {
-	$synonyms = preg_replace('/([а-я-]+)(?=[,\s])/ue', "link_to('$1', '@word?query=$1')", $synonyms.' ');
+	$synonyms = preg_replace_callback('/([а-я-]+)(?=[,\s])/u', function($matches) {
+		return link_to($matches[1], '@word?query='.$matches[1]);
+	}, $synonyms.' ');
 
 	$synonyms = strtr(trim($synonyms), array(
 		"\n" => "</li>\n<li>",
