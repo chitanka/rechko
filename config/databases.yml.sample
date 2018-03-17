@@ -1,0 +1,14 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/07-Databases
+
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      mysql:host=localhost;dbname=rechnik
+      username: root
+      password: ~
+      attributes:
+        default_table_collate: utf8_general_ci
+        default_table_charset: utf8
+        use_native_enum:       true
