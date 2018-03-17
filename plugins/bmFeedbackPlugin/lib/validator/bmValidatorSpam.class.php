@@ -1,7 +1,7 @@
 <?php
 class bmValidatorSpam extends sfValidatorBase
 {
-	private $_maxLinkCount = 2;
+	private $_maxLinkCount = 0;
 
 // 	protected function configure($options = array(), $messages = array())
 // 	{
