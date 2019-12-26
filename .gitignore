@@ -1,13 +1,16 @@
-config/databases.yml
-apps/frontend/config/settings.yml
-apps/frontend/config/app.yml
-apps/frontend/config/factories.yml
-cache/*
-log/*
-web/sitemap.xml
-web/sitemaps/*
-web/uploads/*
-*.php~
-.DS_Store
-*.tmp
-!.gitignore
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/phpunit-bridge ###
+.phpunit
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###

@@ -10,7 +10,7 @@
  * @property clob $synonyms
  * @property string $classification
  * @property integer $type_id
- * @property string $pronounciation
+ * @property string $pronunciation
  * @property clob $etymology
  * @property clob $related_words
  * @property clob $derived_words
@@ -97,7 +97,7 @@ abstract class BaseWord extends AbstractWord
              'type' => 'integer',
              'length' => '2',
              ));
-        $this->hasColumn('pronounciation', 'string', 100, array(
+        $this->hasColumn('pronunciation', 'string', 100, array(
              'type' => 'string',
              'length' => '100',
              ));

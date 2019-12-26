@@ -29,7 +29,7 @@ class WordForm extends BaseWordForm
 			'synonyms' => 'Синоними',
 			'type_id' => 'Тип',
 			'classification' => 'Класификация',
-			'pronounciation' => 'Произношение',
+			'pronunciation' => 'Произношение',
 			'etymology' => 'Етимология',
 			'related_words' => 'Сродни думи',
 			'derived_words' => 'Производни думи',

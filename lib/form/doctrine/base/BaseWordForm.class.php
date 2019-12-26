@@ -28,8 +28,8 @@ abstract class BaseWordForm extends AbstractWordForm
     $this->widgetSchema   ['type_id'] = new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Type'), 'add_empty' => true));
     $this->validatorSchema['type_id'] = new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Type'), 'required' => false));
 
-    $this->widgetSchema   ['pronounciation'] = new sfWidgetFormInputText();
-    $this->validatorSchema['pronounciation'] = new sfValidatorString(array('max_length' => 100, 'required' => false));
+    $this->widgetSchema   ['pronunciation'] = new sfWidgetFormInputText();
+    $this->validatorSchema['pronunciation'] = new sfValidatorString(array('max_length' => 100, 'required' => false));
 
     $this->widgetSchema   ['etymology'] = new sfWidgetFormTextarea();
     $this->validatorSchema['etymology'] = new sfValidatorString(array('required' => false));

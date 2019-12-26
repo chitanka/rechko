@@ -26,8 +26,8 @@ abstract class BaseWordFormFilter extends AbstractWordFormFilter
     $this->widgetSchema   ['type_id'] = new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Type'), 'add_empty' => true));
     $this->validatorSchema['type_id'] = new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Type'), 'column' => 'id'));
 
-    $this->widgetSchema   ['pronounciation'] = new sfWidgetFormFilterInput();
-    $this->validatorSchema['pronounciation'] = new sfValidatorPass(array('required' => false));
+    $this->widgetSchema   ['pronunciation'] = new sfWidgetFormFilterInput();
+    $this->validatorSchema['pronunciation'] = new sfValidatorPass(array('required' => false));
 
     $this->widgetSchema   ['etymology'] = new sfWidgetFormFilterInput();
     $this->validatorSchema['etymology'] = new sfValidatorPass(array('required' => false));
@@ -74,7 +74,7 @@ abstract class BaseWordFormFilter extends AbstractWordFormFilter
       'synonyms' => 'Text',
       'classification' => 'Text',
       'type_id' => 'ForeignKey',
-      'pronounciation' => 'Text',
+      'pronunciation' => 'Text',
       'etymology' => 'Text',
       'related_words' => 'Text',
       'derived_words' => 'Text',

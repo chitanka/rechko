@@ -28,7 +28,7 @@ Word:
     # обикновен (невъзвратен) (default) | възвратен
     classification:      string
     type_id:             integer(2)
-    pronounciation:      string(100)
+    pronunciation:       string(100)
     etymology:           clob
     related_words:       clob
     derived_words:       clob
@@ -141,7 +141,7 @@ Revision:
     old_value:       clob
     new_value:       clob
     user_id:         integer(4)
-    is_pattrolled:   { type: boolean, default: false }
+    is_patrolled:   { type: boolean, default: false }
   relations:
     User:
       class:        sfGuardUser

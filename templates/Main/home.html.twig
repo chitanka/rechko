@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+	<h1>Речник</h1>
+
+	<div class="most-searched card">
+		<h2 class="card-header">Най-търсени думи</h2>
+		<div class="card-body">
+			<ul>
+				{% for word in mostSearchedWords %}
+					<li>
+						<a href="{{ path('app_word_show', {word: word.name, log: 0}) }}">{{ word.name }}</a>
+						<span class="search-count badge badge-pill badge-light">{{ word.searchCount }}</span>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+
+	<div class="most-searched card">
+		<h2 class="card-header">Най-търсени грешни изписвания</h2>
+		<div class="card-body">
+			<ul>
+				{% for form in mostSearchedIncorrectForms %}
+					<li>
+						<a href="{{ path('app_word_show', {word: form.name, log: 0}) }}">{{ form.name }}</a>
+						<span class="search-count badge badge-pill badge-light">{{ form.searchCount }}</span>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+{% endblock %}

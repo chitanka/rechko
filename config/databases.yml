@@ -1,0 +1,19 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/07-Databases
+
+dev:
+  doctrine:
+    param:
+      dsn:      mysql:host=localhost;dbname=chitanka_rechko
+
+all:
+  doctrine:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      mysql:host=localhost;dbname=chitanka_rechko
+      username: chitanka
+      password: ch1tanka
+      attributes:
+        default_table_collate: utf8_general_ci
+        default_table_charset: utf8
+        use_native_enum:       true
