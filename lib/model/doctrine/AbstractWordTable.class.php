@@ -2,7 +2,7 @@
 
 class AbstractWordTable extends Doctrine_Table
 {
-	public function getSimilar($name, $sorted)
+	public function getSimilar($name)
 	{
 		$words = $this->createQuery()
 			->where('name_condensed = ?', MyI18nToolkit::condenseWord($name))
