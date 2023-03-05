@@ -249,7 +249,7 @@ class Text_TeXHyphen
                 $sylArr[] = $syl;
                 $syl = '';
             };
-            $syl .= $word{$i};
+            $syl .= $word[$i];
         };
         $sylArr[] = $syl;
 
@@ -281,7 +281,7 @@ class Text_TeXHyphen
         for ($i = 0; $i < $wordLen; $i++) {
             $keyStr = '';
             for ($j = 0; ($i + $j) < $wordLen; $j++ ) {
-                $keyStr .= $word{$i+$j};
+                $keyStr .= $word[$i+$j];
                 if (false !== ($pattern = $this->_patternDB->getPattern($keyStr))) {
                     $hv = $pattern->getHyphenValues();
                     $keyLen = strlen($keyStr);

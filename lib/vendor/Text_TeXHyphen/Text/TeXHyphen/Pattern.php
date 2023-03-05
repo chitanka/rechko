@@ -292,7 +292,7 @@ class Text_TeXHyphen_Pattern
         $hv = array_fill(0, $cnt + 1, 0);
         $j = 0;
         for ($i = 0; $i < $cnt; $i++) {
-            $c = $patternStr{$i};
+            $c = $patternStr[$i];
             if (is_numeric($c)) {
                 $hv[$j] *= 10;
                 $hv[$j] += intval($c);
