@@ -273,7 +273,7 @@ function _auto_link_urls($text, $href_options = array(), $truncate = false, $tru
 
   return preg_replace_callback(
     SF_AUTO_LINK_RE,
-    create_function('$matches', $callback_function),
+    $callback_function,
     $text
     );
 }
